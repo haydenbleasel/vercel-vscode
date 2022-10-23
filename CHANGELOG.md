@@ -1,3 +1,15 @@
+# v1.0.2 (Sun Oct 23 2022)
+
+#### ⚠️ Pushed to `main`
+
+- Update README.md ([@haydenbleasel](https://github.com/haydenbleasel))
+
+#### Authors: 1
+
+- Hayden Bleasel ([@haydenbleasel](https://github.com/haydenbleasel))
+
+---
+
 # v1.0.1 (Sun Oct 23 2022)
 
 :tada: This release contains work from a new contributor! :tada:
