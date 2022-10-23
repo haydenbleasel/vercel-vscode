@@ -1,4 +1,3 @@
-import type { ExtensionContext } from 'vscode';
 import { StatusBarAlignment, workspace, window } from 'vscode';
 import fetch from 'cross-fetch';
 import { formatDistance } from 'date-fns';
@@ -15,7 +14,7 @@ const toSentenceCase = (str: string): string => {
 // eslint-disable-next-line no-undef
 let interval: NodeJS.Timer | null = null;
 
-export const activate = async (context: ExtensionContext): Promise<void> => {
+export const activate = async (): Promise<void> => {
   const access_token = workspace
     .getConfiguration('vercel-vscode')
     .get('access_token');
