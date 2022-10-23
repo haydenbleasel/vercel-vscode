@@ -14,7 +14,7 @@
     "Other"
   ],
   "activationEvents": [
-    "*"
+    "onStartupFinished"
   ],
   "license": "ISC",
   "main": "./out/extension.js",
