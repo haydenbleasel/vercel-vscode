@@ -34,6 +34,11 @@
           "type": "string",
           "default": "",
           "description": "Your Vercel access token"
+        },
+        "vercel-vscode.project": {
+          "type": "string",
+          "default": "",
+          "description": "Your Vercel project ID"
         }
       }
     },
