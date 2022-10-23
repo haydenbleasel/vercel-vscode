@@ -1,3 +1,15 @@
+# v1.0.3 (Sun Oct 23 2022)
+
+#### ⚠️ Pushed to `main`
+
+- Improve activation event ([@haydenbleasel](https://github.com/haydenbleasel))
+
+#### Authors: 1
+
+- Hayden Bleasel ([@haydenbleasel](https://github.com/haydenbleasel))
+
+---
+
 # v1.0.2 (Sun Oct 23 2022)
 
 #### ⚠️ Pushed to `main`
