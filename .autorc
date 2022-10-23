@@ -1,0 +1,14 @@
+{
+  "plugins": [
+    "npm",
+    "first-time-contributor",
+    "released"
+  ],
+  "owner": "haydenbleasel",
+  "repo": "vercel-vscode",
+  "author": {
+    "name": "Hayden Bleasel",
+    "email": "hello@haydenbleasel.com"
+  },
+  "onlyPublishWithReleaseLabel": false
+}
