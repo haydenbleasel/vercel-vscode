@@ -78,7 +78,7 @@
     "@types/node": "18.x",
     "@types/vscode": "^1.72.0",
     "@typescript-eslint/eslint-plugin": "^5.40.0",
-    "@typescript-eslint/parser": "^5.40.0",
+    "@typescript-eslint/parser": "^5.42.0",
     "auto": "^10.37.6",
     "esbuild": "^0.15.11",
     "eslint": "^8.25.0",
