@@ -80,7 +80,7 @@
     "@typescript-eslint/eslint-plugin": "^5.42.1",
     "@typescript-eslint/parser": "^5.42.1",
     "auto": "^10.37.6",
-    "esbuild": "^0.15.13",
+    "esbuild": "^0.15.16",
     "eslint": "^8.27.0",
     "eslint-plugin-n": "^15.5.1",
     "eslint-plugin-promise": "^6.1.1",
