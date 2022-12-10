@@ -1,15 +1,8 @@
 import { StatusBarAlignment, workspace, window } from 'vscode';
-import fetch from 'cross-fetch';
 import { formatDistance } from 'date-fns';
 import parseError from './utils/parseError';
-
-const toSentenceCase = (str: string): string => {
-  let newString = str.toLowerCase();
-
-  newString = newString.charAt(0).toUpperCase() + newString.slice(1);
-
-  return newString;
-};
+import toSentenceCase from './utils/sentenceCase';
+import fetchDeployments from './utils/fetchDeployments';
 
 // eslint-disable-next-line no-undef
 let interval: NodeJS.Timer | null = null;
@@ -45,41 +38,13 @@ export const activate = async (): Promise<void> => {
 
   const updateStatus = async () => {
     try {
-      const response = await fetch(
-        `https://api.vercel.com/v6/deployments?projectId=${project}&limit=1`,
-        {
-          method: 'GET',
-          headers: {
-            Authorization: `Bearer ${access_token}`,
-          },
-        }
-      );
+      const deployments = await fetchDeployments(project, access_token);
 
-      const data = (await response.json()) as {
-        error?: Error;
-        deployments?: {
-          source?: string;
-          name?: string;
-          createdAt?: string;
-          state:
-            | 'BUILDING'
-            | 'ERROR'
-            | 'INITIALIZING'
-            | 'QUEUED'
-            | 'READY'
-            | 'CANCELED';
-        }[];
-      };
-
-      if (data.error) {
-        throw new Error(data.error.message);
-      }
-
-      if (!data.deployments?.length) {
+      if (!deployments?.length) {
         return;
       }
 
-      const { state, name, createdAt, source } = data.deployments[0];
+      const { state, name, createdAt, source } = deployments[0];
       const formattedDate = createdAt
         ? formatDistance(new Date(createdAt), new Date())
         : 'a while';
