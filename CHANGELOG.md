@@ -1,3 +1,30 @@
+# v1.0.6 (Sat Dec 10 2022)
+
+#### ⚠️ Pushed to `main`
+
+- Fix devDeps ([@haydenbleasel](https://github.com/haydenbleasel))
+- Bump deps ([@haydenbleasel](https://github.com/haydenbleasel))
+- Bump VS Code Engine ([@haydenbleasel](https://github.com/haydenbleasel))
+
+#### 🔩 Dependency Updates
+
+- Bump @types/vscode from 1.73.0 to 1.73.1 [#15](https://github.com/haydenbleasel/vercel-vscode/pull/15) ([@dependabot[bot]](https://github.com/dependabot[bot]))
+- Bump eslint-plugin-react from 7.31.10 to 7.31.11 [#14](https://github.com/haydenbleasel/vercel-vscode/pull/14) ([@dependabot[bot]](https://github.com/dependabot[bot]))
+- Bump @types/node from 18.11.8 to 18.11.10 [#13](https://github.com/haydenbleasel/vercel-vscode/pull/13) ([@dependabot[bot]](https://github.com/dependabot[bot]))
+- Bump stylelint from 14.14.1 to 14.15.0 [#12](https://github.com/haydenbleasel/vercel-vscode/pull/12) ([@dependabot[bot]](https://github.com/dependabot[bot]))
+- Bump @haydenbleasel/harmony from 1.1.8 to 1.1.9 [#9](https://github.com/haydenbleasel/vercel-vscode/pull/9) ([@dependabot[bot]](https://github.com/dependabot[bot]))
+- Bump @typescript-eslint/parser from 5.42.1 to 5.45.0 [#8](https://github.com/haydenbleasel/vercel-vscode/pull/8) ([@dependabot[bot]](https://github.com/dependabot[bot]))
+- Bump typescript from 4.8.4 to 4.9.3 [#7](https://github.com/haydenbleasel/vercel-vscode/pull/7) ([@dependabot[bot]](https://github.com/dependabot[bot]))
+- Bump esbuild from 0.15.13 to 0.15.16 [#6](https://github.com/haydenbleasel/vercel-vscode/pull/6) ([@dependabot[bot]](https://github.com/dependabot[bot]))
+- Bump @types/node from 18.11.4 to 18.11.8 [#1](https://github.com/haydenbleasel/vercel-vscode/pull/1) ([@dependabot[bot]](https://github.com/dependabot[bot]))
+
+#### Authors: 2
+
+- [@dependabot[bot]](https://github.com/dependabot[bot])
+- Hayden Bleasel ([@haydenbleasel](https://github.com/haydenbleasel))
+
+---
+
 # v1.0.5 (Fri Nov 11 2022)
 
 #### ⚠️ Pushed to `main`
