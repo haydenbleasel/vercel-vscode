@@ -8,11 +8,11 @@ A VS Code extension for Vercel deployment status.
 
 1. Install the extension from the [VSCode Marketplace](https://marketplace.visualstudio.com/items?itemName=haydenbleasel.vercel-vscode) or with the terminal command `code --install-extension haydenbleasel.vercel-vscode`.
 2. Open the extension settings and enter your API token.
-3. Create a `.vscode/settings.json` file in your project and add the following:
+3. Open a workspace which uses the Vercel CLI(and has a .vercel/project.json), or create a `.vscode/settings.json` file in your project and add the following:
 
 ```json
 {
-  "vercel-vscode.project": "prj_myproject"
+  "vercel-vscode.project": "prj_myprojectID"
 }
 ```
 
