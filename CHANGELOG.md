@@ -1,3 +1,19 @@
+# v1.0.8 (Wed Dec 14 2022)
+
+:tada: This release contains work from a new contributor! :tada:
+
+Thank you, Aaron Dill ([@aarondill](https://github.com/aarondill)), for all your work!
+
+#### 🐛 Bug Fix
+
+- added ability to auto detect .vercel/project.json files [#16](https://github.com/haydenbleasel/vercel-vscode/pull/16) ([@aarondill](https://github.com/aarondill))
+
+#### Authors: 1
+
+- Aaron Dill ([@aarondill](https://github.com/aarondill))
+
+---
+
 # v1.0.7 (Sat Dec 10 2022)
 
 #### ⚠️ Pushed to `main`
