@@ -1,28 +1,57 @@
-import { StatusBarAlignment, workspace, window } from 'vscode';
+import { StatusBarAlignment, workspace, window, Uri } from 'vscode';
 import { formatDistance } from 'date-fns';
 import parseError from './utils/parseError';
 import toSentenceCase from './utils/sentenceCase';
 import fetchDeployments from './utils/fetchDeployments';
 
+const getProjectIdFromJson = async (): Promise<string | undefined> => {
+  if (!workspace.workspaceFolders?.[0]) {
+    return undefined;
+  }
+  const wf = workspace.workspaceFolders[0].uri.path;
+  const filePath = `${wf}/.vercel/project.json`;
+  const fileUri: Uri = Uri.file(filePath);
+  let vercelProjectJson: Uint8Array | null = null;
+  try {
+    vercelProjectJson = await workspace.fs.readFile(fileUri);
+  } catch {
+    return undefined;
+  }
+  try {
+    const stringJson: string = Buffer.from(vercelProjectJson).toString('utf8');
+    const parsedVercelJSON: { projectId?: string } = JSON.parse(stringJson) as {
+      projectId?: string;
+    };
+    return parsedVercelJSON.projectId;
+  } catch (error) {
+    await window.showErrorMessage(parseError(error));
+    return undefined;
+  }
+};
+
 // eslint-disable-next-line no-undef
 let interval: NodeJS.Timer | null = null;
 
 export const activate = async (): Promise<void> => {
+  let project: string | undefined = workspace
+    .getConfiguration('vercel-vscode')
+    .get('project');
+
+  if (!project || typeof project !== 'string') {
+    // eslint-disable-next-line require-atomic-updates
+    project = await getProjectIdFromJson();
+  }
+
+  if (!project || typeof project !== 'string') {
+    return;
+  }
   const access_token = workspace
     .getConfiguration('vercel-vscode')
     .get('access_token');
-  const project = workspace.getConfiguration('vercel-vscode').get('project');
 
   if (!access_token || typeof access_token !== 'string') {
     await window.showErrorMessage(
       'Please set your Vercel access token in the extension settings.'
-    );
-    return;
-  }
-
-  if (!project || typeof project !== 'string') {
-    await window.showErrorMessage(
-      'Please set your Vercel project name in the extension settings.'
     );
     return;
   }
@@ -38,7 +67,9 @@ export const activate = async (): Promise<void> => {
 
   const updateStatus = async () => {
     try {
-      const deployments = await fetchDeployments(project, access_token);
+      // This CAN'T be undefined, but eslint seems to disagree.
+      // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+      const deployments = await fetchDeployments(project!, access_token);
 
       if (!deployments?.length) {
         return;
