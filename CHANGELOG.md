@@ -1,3 +1,15 @@
+# v1.0.10 (Wed Dec 14 2022)
+
+#### ⚠️ Pushed to `main`
+
+- Resolves #5 ([@haydenbleasel](https://github.com/haydenbleasel))
+
+#### Authors: 1
+
+- Hayden Bleasel ([@haydenbleasel](https://github.com/haydenbleasel))
+
+---
+
 # v1.0.9 (Wed Dec 14 2022)
 
 #### ⚠️ Pushed to `main`
