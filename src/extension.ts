@@ -15,7 +15,6 @@ const getProjectIdFromJson = async (): Promise<string | undefined> => {
   try {
     vercelProjectJson = await workspace.fs.readFile(fileUri);
   } catch {
-    await window.showErrorMessage('Could not find .vercel/project.json file.');
     return undefined;
   }
   try {
@@ -34,16 +33,6 @@ const getProjectIdFromJson = async (): Promise<string | undefined> => {
 let interval: NodeJS.Timer | null = null;
 
 export const activate = async (): Promise<void> => {
-  const access_token = workspace
-    .getConfiguration('vercel-vscode')
-    .get('access_token');
-
-  if (!access_token || typeof access_token !== 'string') {
-    await window.showErrorMessage(
-      'Please set your Vercel access token in the extension settings.'
-    );
-    return;
-  }
   let project: string | undefined = workspace
     .getConfiguration('vercel-vscode')
     .get('project');
@@ -56,6 +45,17 @@ export const activate = async (): Promise<void> => {
   if (!project || typeof project !== 'string') {
     return;
   }
+  const access_token = workspace
+    .getConfiguration('vercel-vscode')
+    .get('access_token');
+
+  if (!access_token || typeof access_token !== 'string') {
+    await window.showErrorMessage(
+      'Please set your Vercel access token in the extension settings.'
+    );
+    return;
+  }
+
   const statusBarItem = window.createStatusBarItem(
     StatusBarAlignment.Right,
     100
