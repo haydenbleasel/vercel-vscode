@@ -67,7 +67,7 @@
     "@haydenbleasel/harmony": "^1.1.9",
     "@types/node": "18.x",
     "@types/vscode": "^1.74.0",
-    "@typescript-eslint/eslint-plugin": "^5.46.0",
+    "@typescript-eslint/eslint-plugin": "^5.47.1",
     "@typescript-eslint/parser": "^5.46.0",
     "auto": "^10.37.6",
     "esbuild": "^0.16.4",
