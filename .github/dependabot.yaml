@@ -4,4 +4,6 @@ updates:
     directory: '/'
     schedule:
       interval: 'monthly'
+    assignees:
+      - 'haydenbleasel'
     open-pull-requests-limit: 10
