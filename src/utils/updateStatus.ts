@@ -1,9 +1,9 @@
 import { formatDistance } from 'date-fns';
 import type { StatusBarItem } from 'vscode';
 import { window } from 'vscode';
-import fetchDeployments from './fetchDeployments';
-import parseError from './parseError';
-import toSentenceCase from './sentenceCase';
+import fetchDeployments from '@/utils/fetchDeployments';
+import parseError from '@/utils/parseError';
+import toSentenceCase from '@/utils/sentenceCase';
 
 const updateStatus = async ({
   statusBarItem,

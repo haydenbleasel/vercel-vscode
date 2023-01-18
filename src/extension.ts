@@ -1,6 +1,6 @@
 import { StatusBarAlignment, workspace, window } from 'vscode';
-import getProjectIdFromJson from './utils/parseJson';
-import updateStatus from './utils/updateStatus';
+import getProjectIdFromJson from '@/utils/parseJson';
+import updateStatus from '@/utils/updateStatus';
 
 // eslint-disable-next-line no-undef
 let interval: NodeJS.Timer | null = null;

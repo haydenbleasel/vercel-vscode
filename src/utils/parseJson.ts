@@ -1,5 +1,5 @@
 import { workspace, window, Uri } from 'vscode';
-import parseError from './parseError';
+import parseError from '@/utils/parseError';
 
 const getProjectIdFromJson = async (): Promise<string | undefined> => {
   if (!workspace.workspaceFolders?.[0]) {
