@@ -1,3 +1,21 @@
+# v1.0.11 (Wed Jan 18 2023)
+
+#### ⚠️ Pushed to `main`
+
+- Fix typo ([@haydenbleasel](https://github.com/haydenbleasel))
+- Update .autorc ([@haydenbleasel](https://github.com/haydenbleasel))
+- Update package.json ([@haydenbleasel](https://github.com/haydenbleasel))
+- Add alias path ([@haydenbleasel](https://github.com/haydenbleasel))
+- Bump deps ([@haydenbleasel](https://github.com/haydenbleasel))
+- Upgrade Harmony ([@haydenbleasel](https://github.com/haydenbleasel))
+- Update dependabot.yaml ([@haydenbleasel](https://github.com/haydenbleasel))
+
+#### Authors: 1
+
+- Hayden Bleasel ([@haydenbleasel](https://github.com/haydenbleasel))
+
+---
+
 # v1.0.10 (Wed Dec 14 2022)
 
 #### ⚠️ Pushed to `main`
