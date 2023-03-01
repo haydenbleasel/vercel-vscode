@@ -66,7 +66,7 @@
     "@auto-it/npm": "^10.37.6",
     "@beskar-labs/harmony": "^2.0.8",
     "@types/node": "18.x",
-    "@types/vscode": "^1.74.0",
+    "@types/vscode": "^1.75.1",
     "auto": "^10.37.6",
     "esbuild": "^0.17.5",
     "eslint": "^8.33.0",
