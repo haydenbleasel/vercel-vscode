@@ -1,3 +1,24 @@
+# v1.0.12 (Sat Apr 01 2023)
+
+#### ⚠️ Pushed to `main`
+
+- Bump deps, fix vscode types version ([@haydenbleasel](https://github.com/haydenbleasel))
+
+#### 🔩 Dependency Updates
+
+- Bump eslint from 8.32.0 to 8.33.0 [#43](https://github.com/beskar-co/vercel-vscode/pull/43) ([@dependabot[bot]](https://github.com/dependabot[bot]))
+- Bump jest from 29.3.1 to 29.4.1 [#42](https://github.com/beskar-co/vercel-vscode/pull/42) ([@dependabot[bot]](https://github.com/dependabot[bot]))
+- Bump esbuild from 0.17.3 to 0.17.5 [#44](https://github.com/beskar-co/vercel-vscode/pull/44) ([@dependabot[bot]](https://github.com/dependabot[bot]))
+- Bump typescript from 4.9.4 to 4.9.5 [#45](https://github.com/beskar-co/vercel-vscode/pull/45) ([@dependabot[bot]](https://github.com/dependabot[bot]))
+- Bump @types/node from 18.11.13 to 18.11.18 [#24](https://github.com/beskar-co/vercel-vscode/pull/24) ([@dependabot[bot]](https://github.com/dependabot[bot]))
+
+#### Authors: 2
+
+- [@dependabot[bot]](https://github.com/dependabot[bot])
+- Hayden Bleasel ([@haydenbleasel](https://github.com/haydenbleasel))
+
+---
+
 # v1.0.11 (Wed Jan 18 2023)
 
 #### ⚠️ Pushed to `main`
