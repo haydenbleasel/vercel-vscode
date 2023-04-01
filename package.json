@@ -62,7 +62,7 @@
     "date-fns": "^2.29.3"
   },
   "devDependencies": {
-    "@auto-it/first-time-contributor": "^10.37.6",
+    "@auto-it/first-time-contributor": "^10.43.0",
     "@auto-it/npm": "^10.37.6",
     "@beskar-labs/harmony": "^2.0.8",
     "@types/node": "18.x",
