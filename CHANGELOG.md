@@ -1,3 +1,15 @@
+# v1.0.13 (Sat Apr 01 2023)
+
+#### ⚠️ Pushed to `main`
+
+- Delete dependabot.yaml ([@haydenbleasel](https://github.com/haydenbleasel))
+
+#### Authors: 1
+
+- Hayden Bleasel ([@haydenbleasel](https://github.com/haydenbleasel))
+
+---
+
 # v1.0.12 (Sat Apr 01 2023)
 
 #### ⚠️ Pushed to `main`
