@@ -17,15 +17,18 @@ type VercelResponse = {
 };
 
 const fetchDeployments = async (
-  project: string,
-  access_token: string
+  accessToken: string,
+  projectId: string,
+  teamId?: string
 ): Promise<VercelResponse['deployments']> => {
   const response = await fetch(
-    `https://api.vercel.com/v6/deployments?projectId=${project}&limit=1`,
+    teamId
+      ? `https://api.vercel.com/v6/deployments?teamId=${teamId}&projectId=${projectId}&limit=1`
+      : `https://api.vercel.com/v6/deployments?projectId=${projectId}&limit=1`,
     {
       method: 'GET',
       headers: {
-        Authorization: `Bearer ${access_token}`,
+        Authorization: `Bearer ${accessToken}`,
       },
     }
   );

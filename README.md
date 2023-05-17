@@ -7,31 +7,41 @@ A VS Code extension for Vercel deployment status.
 ## Usage
 
 1. Install the extension from the [VSCode Marketplace](https://marketplace.visualstudio.com/items?itemName=haydenbleasel.vercel-vscode) or with the terminal command `code --install-extension haydenbleasel.vercel-vscode`.
-2. Open the extension settings and enter your API token.
-3. Add your Vercel Project ID to your workspace. This can be done in one of two ways (see below).
+2. Open the extension settings and enter your API token (recommended to put this in your user settings so it is not shared with others).
+3. Add your Vercel Project ID and/or Team ID to your workspace. This can be done in one of two ways (see below).
 4. Reload VSCode to apply the changes and start using the extension.
 
-## Vercel Project ID
+## Settings Properties
 
-Your Vercel Project ID can be found in the Vercel dashboard under `Settings > General > Project ID` and can be added to the workspace in one of two ways:
+### Vercel Project ID
 
-### Using the Vercel `project.json`
+Your Vercel Project ID can be found in the Vercel dashboard under `Settings > General > Project ID`.
 
-The [`vercel.json`](https://vercel.com/docs/project-configuration) configuration file lets you configure, and override the default behavior of Vercel from within your project. You can add your Vercel Project ID to this file by adding the following:
+### (Optional) Vercel Team ID
+
+If you are working on a project that is part of a team, you will also need your team ID to access the API. Your Vercel Team ID can be found in the Vercel dashboard under `{TEAM} > Settings > General > Team ID`.
+
+## Configuration
+
+#### Using VSCode settings (Recommended)
+
+You can create a `.vscode/settings.json` file in your project and add the following:
 
 ```json
 {
-  "projectId": "prj_myprojectID"
+  "vercel-vscode.projectId": "prj_myProjectID",
+  "vercel-vscode.teamId":: "team_myTeamID"
 }
 ```
 
-### Using VSCode settings
+### Using .vercel/project.json
 
-Alternatively, you can create a `.vscode/settings.json` file in your project and add the following:
+You can add your Vercel Project ID and/or Team Id to this file by adding the following:
 
 ```json
 {
-  "vercel-vscode.project": "prj_myprojectID"
+  "projectId": "prj_myProjectID",
+  "teamId": "team_myTeamID"
 }
 ```
 

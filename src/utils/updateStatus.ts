@@ -7,15 +7,17 @@ import toSentenceCase from '@/utils/sentenceCase';
 
 const updateStatus = async ({
   statusBarItem,
-  project,
-  access_token,
+  accessToken,
+  projectId,
+  teamId,
 }: {
   statusBarItem: StatusBarItem;
-  project: string;
-  access_token: string;
+  accessToken: string;
+  projectId: string;
+  teamId?: string;
 }): Promise<void> => {
   try {
-    const deployments = await fetchDeployments(project, access_token);
+    const deployments = await fetchDeployments(accessToken, projectId, teamId);
 
     if (!deployments?.length) {
       return;
