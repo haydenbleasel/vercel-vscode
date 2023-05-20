@@ -36,20 +36,18 @@ export const activate = async (): Promise<void> => {
   statusBarItem.tooltip = 'Loading Vercel deployment status...';
   statusBarItem.show();
 
-  await updateStatus({
-    statusBarItem,
-    accessToken,
-    projectId,
-    teamId,
-  });
-
-  interval = setInterval(async () => {
-    await updateStatus({
+  const update = async () =>
+    updateStatus({
       statusBarItem,
       accessToken,
       projectId,
       teamId,
     });
+
+  await update();
+
+  interval = setInterval(async () => {
+    await update();
   }, 5000);
 };
 
