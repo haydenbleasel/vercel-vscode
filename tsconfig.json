@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "baseUrl": ".",
     "module": "commonjs",
     "target": "ES2020",
     "outDir": "out",
@@ -8,9 +9,12 @@
     "rootDir": "src",
     "strict": true,
     "strictNullChecks": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUnusedParameters": true,
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["src/*"]
     }
   },
-  "include": ["**/*.ts", "**/*.tsx", "eslint.config.mjs"]
+  "include": ["src/**/*", "eslint.config.mjs"]
 }

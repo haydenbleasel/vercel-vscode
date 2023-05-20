@@ -1,22 +1,21 @@
 import { StatusBarAlignment, window } from 'vscode';
-import getProjectIdFromJson from '@/utils/parseJson';
-import updateStatus from '@/utils/updateStatus';
 import { getAccessToken, getProjectId, getTeamId } from './utils/config';
 import toast from './utils/toast';
 import { triangle } from './utils/const';
+import updateStatus from '@/utils/updateStatus';
+import getProjectIdFromJson from '@/utils/vercelJson';
 
 // eslint-disable-next-line no-undef
 let interval: NodeJS.Timer | null = null;
 
 export const activate = async (): Promise<void> => {
-  const project = await getProjectIdFromJson();
-  const projectId = project?.projectId ?? getProjectId();
+  const projectId = await getProjectId();
 
   if (!projectId) {
     return;
   }
 
-  const accessToken = getAccessToken();
+  const accessToken = await getAccessToken();
 
   if (!accessToken) {
     toast
@@ -25,7 +24,7 @@ export const activate = async (): Promise<void> => {
     return;
   }
 
-  const teamId = project?.teamId ?? getTeamId();
+  const teamId = await getTeamId();
 
   const statusBarItem = window.createStatusBarItem(
     StatusBarAlignment.Right,
@@ -36,20 +35,18 @@ export const activate = async (): Promise<void> => {
   statusBarItem.tooltip = 'Loading Vercel deployment status...';
   statusBarItem.show();
 
-  await updateStatus({
-    statusBarItem,
-    accessToken,
-    projectId,
-    teamId,
-  });
-
-  interval = setInterval(async () => {
-    await updateStatus({
+  const update = async () =>
+    updateStatus({
       statusBarItem,
       accessToken,
       projectId,
       teamId,
     });
+
+  await update();
+
+  interval = setInterval(async () => {
+    await update();
   }, 5000);
 };
 
