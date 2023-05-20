@@ -24,19 +24,8 @@ export const getTeamId = async (): Promise<string | undefined> => {
 
   const vercelJson = await getVercelJson();
 
-  return vercelJson?.teamId;
+  return vercelJson?.orgId;
 };
 
-export const getAccessToken = async (): Promise<string | undefined> => {
-  const workspaceAccessToken = workspace
-    .getConfiguration(app)
-    .get('accessToken');
-
-  if (workspaceAccessToken) {
-    return workspaceAccessToken as string;
-  }
-
-  const vercelJson = await getVercelJson();
-
-  return vercelJson?.projectId;
-};
+export const getAccessToken = (): string | undefined =>
+  workspace.getConfiguration(app).get('accessToken');

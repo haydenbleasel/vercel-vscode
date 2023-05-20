@@ -1,10 +1,10 @@
 import { workspace, Uri } from 'vscode';
-import toast from './toast';
 import parseError from '@/utils/parseError';
+import toast from './toast';
 
 export type VercelProjectJson = {
   projectId?: string;
-  teamId?: string;
+  orgId?: string;
 };
 
 const getVercelJson = async (): Promise<VercelProjectJson | undefined> => {
@@ -13,7 +13,7 @@ const getVercelJson = async (): Promise<VercelProjectJson | undefined> => {
   }
 
   const { path } = workspace.workspaceFolders[0].uri;
-  const filePath = `${path}/vercel.json`;
+  const filePath = `${path}/.vercel/project.json`;
   const fileUri: Uri = Uri.file(filePath);
 
   let vercelProjectJson: Uint8Array | null = null;

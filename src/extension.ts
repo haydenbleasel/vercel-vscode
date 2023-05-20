@@ -1,9 +1,8 @@
 import { StatusBarAlignment, window } from 'vscode';
+import updateStatus from '@/utils/updateStatus';
 import { getAccessToken, getProjectId, getTeamId } from './utils/config';
 import toast from './utils/toast';
 import { triangle } from './utils/const';
-import updateStatus from '@/utils/updateStatus';
-import getProjectIdFromJson from '@/utils/vercelJson';
 
 // eslint-disable-next-line no-undef
 let interval: NodeJS.Timer | null = null;
@@ -15,7 +14,7 @@ export const activate = async (): Promise<void> => {
     return;
   }
 
-  const accessToken = await getAccessToken();
+  const accessToken = getAccessToken();
 
   if (!accessToken) {
     toast
