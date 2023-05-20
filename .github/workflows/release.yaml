@@ -48,7 +48,7 @@ jobs:
             yarn-deps-${{ hashFiles('yarn.lock') }}
 
       - name: Install dependencies
-        run: yarn install --frozen-lockfile
+        run: yarn install --frozen-lockfile --ignore-engines
 
       # Bump version and create a release
       - name: Bump version
