@@ -1,42 +1,38 @@
-import { StatusBarAlignment, workspace, window } from 'vscode';
+import { StatusBarAlignment, window } from 'vscode';
 import getProjectIdFromJson from '@/utils/parseJson';
 import updateStatus from '@/utils/updateStatus';
+import { getAccessToken, getProjectId, getTeamId } from './utils/config';
+import toast from './utils/toast';
+import { triangle } from './utils/const';
 
 // eslint-disable-next-line no-undef
 let interval: NodeJS.Timer | null = null;
 
 export const activate = async (): Promise<void> => {
   const project = await getProjectIdFromJson();
-
-  const projectId: string | undefined = project?.projectId
-    ? project.projectId
-    : workspace.getConfiguration('vercelVSCode').get('projectId');
+  const projectId = project?.projectId ?? getProjectId();
 
   if (!projectId) {
     return;
   }
 
-  const accessToken: string | undefined = workspace
-    .getConfiguration('vercelVSCode')
-    .get('accessToken');
+  const accessToken = getAccessToken();
 
   if (!accessToken) {
-    await window.showErrorMessage(
-      'Please set your Vercel Access Token in the extension settings'
-    );
+    toast
+      .error('Please set your Vercel Access Token in the extension settings')
+      .catch(toast.error);
     return;
   }
 
-  const teamId: string | undefined = project?.teamId
-    ? project.teamId
-    : workspace.getConfiguration('vercelVSCode').get('teamId');
+  const teamId = project?.teamId ?? getTeamId();
 
   const statusBarItem = window.createStatusBarItem(
     StatusBarAlignment.Right,
     100
   );
 
-  statusBarItem.text = `$(debug-breakpoint-function-unverified) Loading`;
+  statusBarItem.text = `${triangle} Loading`;
   statusBarItem.tooltip = 'Loading Vercel deployment status...';
   statusBarItem.show();
 
@@ -52,7 +48,7 @@ export const activate = async (): Promise<void> => {
       statusBarItem,
       accessToken,
       projectId,
-      teamId: project?.teamId,
+      teamId,
     });
   }, 5000);
 };

@@ -1,5 +1,6 @@
 import { workspace, window, Uri } from 'vscode';
 import parseError from '@/utils/parseError';
+import toast from './toast';
 
 export type VercelProjectJson = {
   projectId?: string;
@@ -33,7 +34,7 @@ const getProjectIdFromJson = async (): Promise<
     return parsedVercelProjectJSON;
   } catch (error) {
     const message = parseError(error);
-    await window.showErrorMessage(message);
+    await toast.error(message);
     return undefined;
   }
 };

@@ -1,9 +1,10 @@
 import { formatDistance } from 'date-fns';
 import type { StatusBarItem } from 'vscode';
-import { window } from 'vscode';
 import fetchDeployments from '@/utils/fetchDeployments';
 import parseError from '@/utils/parseError';
 import toSentenceCase from '@/utils/sentenceCase';
+import toast from './toast';
+import { triangle } from './const';
 
 const updateStatus = async ({
   statusBarItem,
@@ -28,9 +29,7 @@ const updateStatus = async ({
       ? formatDistance(new Date(createdAt), new Date())
       : 'a while';
 
-    statusBarItem.text = `$(debug-breakpoint-function-unverified) ${toSentenceCase(
-      state
-    )}`;
+    statusBarItem.text = `${triangle} ${toSentenceCase(state)}`;
     statusBarItem.tooltip = `${
       name ?? 'unknown repo'
     } (${state.toLowerCase()}) ${formattedDate} ago via ${
@@ -39,7 +38,7 @@ const updateStatus = async ({
   } catch (error) {
     const message = parseError(error);
 
-    await window.showErrorMessage(message);
+    await toast.error(message);
   }
 };
 
