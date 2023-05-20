@@ -1,3 +1,15 @@
+# v1.0.17 (Sat May 20 2023)
+
+#### 🐛 Bug Fix
+
+- Tsup [#66](https://github.com/beskar-co/vercel-vscode/pull/66) ([@haydenbleasel](https://github.com/haydenbleasel))
+
+#### Authors: 1
+
+- Hayden Bleasel ([@haydenbleasel](https://github.com/haydenbleasel))
+
+---
+
 # v1.0.16 (Sat May 20 2023)
 
 #### ⚠️ Pushed to `main`
