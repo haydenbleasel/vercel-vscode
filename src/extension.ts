@@ -1,9 +1,9 @@
 import { StatusBarAlignment, window } from 'vscode';
-import getProjectIdFromJson from '@/utils/parseJson';
-import updateStatus from '@/utils/updateStatus';
 import { getAccessToken, getProjectId, getTeamId } from './utils/config';
 import toast from './utils/toast';
 import { triangle } from './utils/const';
+import updateStatus from '@/utils/updateStatus';
+import getProjectIdFromJson from '@/utils/parseJson';
 
 // eslint-disable-next-line no-undef
 let interval: NodeJS.Timer | null = null;

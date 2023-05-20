@@ -1,6 +1,6 @@
-import { workspace, window, Uri } from 'vscode';
-import parseError from '@/utils/parseError';
+import { workspace, Uri } from 'vscode';
 import toast from './toast';
+import parseError from '@/utils/parseError';
 
 export type VercelProjectJson = {
   projectId?: string;
