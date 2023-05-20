@@ -1,3 +1,15 @@
+# v1.0.19 (Sat May 20 2023)
+
+#### ⚠️ Pushed to `main`
+
+- Add production logging ([@haydenbleasel](https://github.com/haydenbleasel))
+
+#### Authors: 1
+
+- Hayden Bleasel ([@haydenbleasel](https://github.com/haydenbleasel))
+
+---
+
 # v1.0.18 (Sat May 20 2023)
 
 #### ⚠️ Pushed to `main`
