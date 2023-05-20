@@ -13,9 +13,7 @@
     "Testing",
     "Other"
   ],
-  "activationEvents": [
-    "onStartupFinished"
-  ],
+  "activationEvents": [],
   "license": "ISC",
   "main": "./out/extension.js",
   "repository": {
@@ -23,10 +21,6 @@
     "url": "https://github.com/beskar-co/vercel-vscode"
   },
   "contributes": {
-    "commands": [],
-    "views": {
-      "explorer": []
-    },
     "configuration": {
       "title": "Vercel",
       "properties": {
@@ -46,17 +40,12 @@
           "description": "Your Vercel Team ID"
         }
       }
-    },
-    "menus": {
-      "view/title": [],
-      "view/item/context": [],
-      "commandPalette": []
     }
   },
   "scripts": {
-    "vscode:prepublish": "npm run package",
-    "prepackage": "rm -fr out",
-    "package": "tsup"
+    "vscode:prepublish": "npm run build",
+    "build": "tsup",
+    "watch": "tsup"
   },
   "dependencies": {
     "cross-fetch": "^3.1.6",

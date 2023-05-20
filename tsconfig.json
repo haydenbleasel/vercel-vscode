@@ -8,9 +8,9 @@
     "rootDir": "src",
     "strict": true,
     "strictNullChecks": true,
-    "paths": {
-      "@/*": ["./src/*"]
-    }
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUnusedParameters": true
   },
-  "include": ["**/*.ts", "**/*.tsx", "eslint.config.mjs"]
+  "include": ["src/**/*", "eslint.config.mjs"]
 }

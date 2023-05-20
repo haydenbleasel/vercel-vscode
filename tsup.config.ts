@@ -1,11 +1,12 @@
 import { defineConfig } from 'tsup';
 
 export default defineConfig({
-  entry: ['src/extension.ts'],
+  entry: ['src/'],
   outDir: 'out',
+  splitting: false,
   sourcemap: false,
   minify: true,
-  format: ['cjs'],
+  clean: true,
   external: ['vscode'],
-  platform: 'node',
+  format: 'cjs',
 });
