@@ -35,7 +35,7 @@ You can create a `.vscode/settings.json` file in your project and add the follow
 }
 ```
 
-### Using .vercel/project.json
+### Using `vercel.json`
 
 You can add your Vercel Project ID and/or Team Id to this file by adding the following:
 

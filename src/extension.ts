@@ -3,20 +3,19 @@ import { getAccessToken, getProjectId, getTeamId } from './utils/config';
 import toast from './utils/toast';
 import { triangle } from './utils/const';
 import updateStatus from '@/utils/updateStatus';
-import getProjectIdFromJson from '@/utils/parseJson';
+import getProjectIdFromJson from '@/utils/vercelJson';
 
 // eslint-disable-next-line no-undef
 let interval: NodeJS.Timer | null = null;
 
 export const activate = async (): Promise<void> => {
-  const project = await getProjectIdFromJson();
-  const projectId = project?.projectId ?? getProjectId();
+  const projectId = await getProjectId();
 
   if (!projectId) {
     return;
   }
 
-  const accessToken = getAccessToken();
+  const accessToken = await getAccessToken();
 
   if (!accessToken) {
     toast
@@ -25,7 +24,7 @@ export const activate = async (): Promise<void> => {
     return;
   }
 
-  const teamId = project?.teamId ?? getTeamId();
+  const teamId = await getTeamId();
 
   const statusBarItem = window.createStatusBarItem(
     StatusBarAlignment.Right,

@@ -13,7 +13,9 @@
     "Testing",
     "Other"
   ],
-  "activationEvents": [],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
   "license": "ISC",
   "main": "./out/extension.js",
   "repository": {
