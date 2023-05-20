@@ -30,15 +30,20 @@
     "configuration": {
       "title": "Vercel",
       "properties": {
-        "vercel-vscode.access_token": {
+        "vercelVSCode.accessToken": {
           "type": "string",
           "default": "",
-          "description": "Your Vercel access token"
+          "description": "Your Vercel Access Token"
         },
-        "vercel-vscode.project": {
+        "vercelVSCode.projectId": {
           "type": "string",
           "default": "",
-          "description": "Your Vercel project ID"
+          "description": "Your Vercel Project ID"
+        },
+        "vercelVSCode.teamId": {
+          "type": "string",
+          "default": "",
+          "description": "Your Vercel Team ID"
         }
       }
     },
@@ -76,5 +81,8 @@
     "typescript": "^5.0.3"
   },
   "prettier": "@beskar-labs/harmony/prettier",
-  "author": "Hayden Bleasel <hello@haydenbleasel.com>"
+  "author": "Hayden Bleasel <hello@haydenbleasel.com>",
+  "contributors": [
+    "Anna Zhang <annazhang343@gmail.com>"
+  ]
 }

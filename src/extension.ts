@@ -6,29 +6,30 @@ import updateStatus from '@/utils/updateStatus';
 let interval: NodeJS.Timer | null = null;
 
 export const activate = async (): Promise<void> => {
-  let project: string | undefined = workspace
-    .getConfiguration('vercel-vscode')
-    .get('project');
+  const project = await getProjectIdFromJson();
 
-  if (!project || typeof project !== 'string') {
-    // eslint-disable-next-line require-atomic-updates
-    project = await getProjectIdFromJson();
-  }
+  const projectId: string | undefined = project?.projectId
+    ? project.projectId
+    : workspace.getConfiguration('vercelVSCode').get('projectId');
 
-  if (!project || typeof project !== 'string') {
+  if (!projectId) {
     return;
   }
 
-  const access_token = workspace
-    .getConfiguration('vercel-vscode')
-    .get('access_token');
+  const accessToken: string | undefined = workspace
+    .getConfiguration('vercelVSCode')
+    .get('accessToken');
 
-  if (!access_token || typeof access_token !== 'string') {
+  if (!accessToken) {
     await window.showErrorMessage(
-      'Please set your Vercel access token in the extension settings.'
+      'Please set your Vercel Access Token in the extension settings'
     );
     return;
   }
+
+  const teamId: string | undefined = project?.teamId
+    ? project.teamId
+    : workspace.getConfiguration('vercelVSCode').get('teamId');
 
   const statusBarItem = window.createStatusBarItem(
     StatusBarAlignment.Right,
@@ -39,13 +40,19 @@ export const activate = async (): Promise<void> => {
   statusBarItem.tooltip = 'Loading Vercel deployment status...';
   statusBarItem.show();
 
-  await updateStatus({ statusBarItem, project, access_token });
+  await updateStatus({
+    statusBarItem,
+    accessToken,
+    projectId,
+    teamId,
+  });
 
   interval = setInterval(async () => {
     await updateStatus({
       statusBarItem,
-      project: project as unknown as string,
-      access_token,
+      accessToken,
+      projectId,
+      teamId: project?.teamId,
     });
   }, 5000);
 };

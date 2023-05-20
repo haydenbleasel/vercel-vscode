@@ -1,7 +1,14 @@
 import { workspace, window, Uri } from 'vscode';
 import parseError from '@/utils/parseError';
 
-const getProjectIdFromJson = async (): Promise<string | undefined> => {
+export type VercelProjectJson = {
+  projectId?: string;
+  teamId?: string;
+};
+
+const getProjectIdFromJson = async (): Promise<
+  VercelProjectJson | undefined
+> => {
   if (!workspace.workspaceFolders?.[0]) {
     return undefined;
   }
@@ -20,10 +27,10 @@ const getProjectIdFromJson = async (): Promise<string | undefined> => {
 
   try {
     const stringJson: string = Buffer.from(vercelProjectJson).toString('utf8');
-    const parsedVercelJSON: { projectId?: string } = JSON.parse(stringJson) as {
-      projectId?: string;
-    };
-    return parsedVercelJSON.projectId;
+    const parsedVercelProjectJSON: { projectId?: string } = JSON.parse(
+      stringJson
+    ) as VercelProjectJson;
+    return parsedVercelProjectJSON;
   } catch (error) {
     const message = parseError(error);
     await window.showErrorMessage(message);
