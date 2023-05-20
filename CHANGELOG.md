@@ -1,3 +1,15 @@
+# v1.0.16 (Sat May 20 2023)
+
+#### ⚠️ Pushed to `main`
+
+- Fix build issues ([@haydenbleasel](https://github.com/haydenbleasel))
+
+#### Authors: 1
+
+- Hayden Bleasel ([@haydenbleasel](https://github.com/haydenbleasel))
+
+---
+
 # v1.0.15 (Sat May 20 2023)
 
 #### ⚠️ Pushed to `main`
