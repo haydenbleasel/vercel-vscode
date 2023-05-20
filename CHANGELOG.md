@@ -1,3 +1,16 @@
+# v1.0.20 (Sat May 20 2023)
+
+#### ⚠️ Pushed to `main`
+
+- Merge branch 'main' of https://github.com/beskar-co/vercel-vscode ([@haydenbleasel](https://github.com/haydenbleasel))
+- Allow console logging ([@haydenbleasel](https://github.com/haydenbleasel))
+
+#### Authors: 1
+
+- Hayden Bleasel ([@haydenbleasel](https://github.com/haydenbleasel))
+
+---
+
 # v1.0.19 (Sat May 20 2023)
 
 #### ⚠️ Pushed to `main`
