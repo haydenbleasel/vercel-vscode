@@ -5,8 +5,9 @@ export default defineConfig({
   outDir: 'out',
   splitting: false,
   sourcemap: true,
-  minify: true,
+  minify: false,
   clean: true,
   external: ['vscode'],
   format: 'cjs',
+  noExternal: ['date-fns', 'cross-fetch'],
 });
