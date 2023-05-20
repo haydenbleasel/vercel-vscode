@@ -1,3 +1,20 @@
+# v1.0.15 (Sat May 20 2023)
+
+#### ⚠️ Pushed to `main`
+
+- Fix lockfile ([@haydenbleasel](https://github.com/haydenbleasel))
+- Note access token in settings ([@haydenbleasel](https://github.com/haydenbleasel))
+- Merge branch 'main' of https://github.com/beskar-co/vercel-vscode ([@haydenbleasel](https://github.com/haydenbleasel))
+- Misc cleanup and fixes ([@haydenbleasel](https://github.com/haydenbleasel))
+- Fix vscode types ([@haydenbleasel](https://github.com/haydenbleasel))
+- Bump deps ([@haydenbleasel](https://github.com/haydenbleasel))
+
+#### Authors: 1
+
+- Hayden Bleasel ([@haydenbleasel](https://github.com/haydenbleasel))
+
+---
+
 # v1.0.14 (Sat May 20 2023)
 
 :tada: This release contains work from a new contributor! :tada:
