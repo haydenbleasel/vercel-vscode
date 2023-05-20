@@ -30,7 +30,8 @@ You can create a `.vscode/settings.json` file in your project and add the follow
 ```json
 {
   "vercel-vscode.projectId": "prj_myProjectID",
-  "vercel-vscode.teamId": "team_myTeamID"
+  "vercel-vscode.teamId": "team_myTeamID",
+  "vercel-vscode.accessToken": "myAccessToken"
 }
 ```
 
