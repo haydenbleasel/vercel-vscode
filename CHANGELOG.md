@@ -1,3 +1,20 @@
+# v1.0.14 (Sat May 20 2023)
+
+:tada: This release contains work from a new contributor! :tada:
+
+Thank you, Anna Zhang ([@claritise](https://github.com/claritise)), for all your work!
+
+#### 🐛 Bug Fix
+
+- Added compatibility for team projects [#65](https://github.com/beskar-co/vercel-vscode/pull/65) ([@claritise](https://github.com/claritise) [@haydenbleasel](https://github.com/haydenbleasel))
+
+#### Authors: 2
+
+- Anna Zhang ([@claritise](https://github.com/claritise))
+- Hayden Bleasel ([@haydenbleasel](https://github.com/haydenbleasel))
+
+---
+
 # v1.0.13 (Sat Apr 01 2023)
 
 #### ⚠️ Pushed to `main`
