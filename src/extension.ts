@@ -10,11 +10,15 @@ let interval: NodeJS.Timer | null = null;
 export const activate = async (): Promise<void> => {
   const projectId = await getProjectId();
 
+  console.log('Loaded Vercel Project ID', projectId);
+
   if (!projectId) {
     return;
   }
 
   const accessToken = getAccessToken();
+
+  console.log('Loaded Vercel Access Token', projectId);
 
   if (!accessToken) {
     toast
@@ -24,6 +28,10 @@ export const activate = async (): Promise<void> => {
   }
 
   const teamId = await getTeamId();
+
+  if (teamId) {
+    console.log('Loaded Vercel Team ID', teamId);
+  }
 
   const statusBarItem = window.createStatusBarItem(
     StatusBarAlignment.Right,

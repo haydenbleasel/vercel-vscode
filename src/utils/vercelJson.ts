@@ -8,12 +8,15 @@ export type VercelProjectJson = {
 };
 
 const getVercelJson = async (): Promise<VercelProjectJson | undefined> => {
-  if (!workspace.workspaceFolders?.[0]) {
+  const root = workspace.workspaceFolders?.[0];
+
+  console.log('Checking Vercel Project JSON from root', root?.uri.path);
+
+  if (!root) {
     return undefined;
   }
 
-  const { path } = workspace.workspaceFolders[0].uri;
-  const filePath = `${path}/.vercel/project.json`;
+  const filePath = `${root.uri.path}/.vercel/project.json`;
   const fileUri: Uri = Uri.file(filePath);
 
   let vercelProjectJson: Uint8Array | null = null;
@@ -26,9 +29,7 @@ const getVercelJson = async (): Promise<VercelProjectJson | undefined> => {
 
   try {
     const stringJson: string = Buffer.from(vercelProjectJson).toString('utf8');
-    const parsedVercelProjectJSON: { projectId?: string } = JSON.parse(
-      stringJson
-    ) as VercelProjectJson;
+    const parsedVercelProjectJSON = JSON.parse(stringJson) as VercelProjectJson;
     return parsedVercelProjectJSON;
   } catch (error) {
     const message = parseError(error);
