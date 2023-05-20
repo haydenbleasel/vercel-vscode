@@ -1,3 +1,15 @@
+# v1.0.18 (Sat May 20 2023)
+
+#### ⚠️ Pushed to `main`
+
+- Implement vercel link to README ([@haydenbleasel](https://github.com/haydenbleasel))
+
+#### Authors: 1
+
+- Hayden Bleasel ([@haydenbleasel](https://github.com/haydenbleasel))
+
+---
+
 # v1.0.17 (Sat May 20 2023)
 
 #### 🐛 Bug Fix
