@@ -28,32 +28,27 @@ jobs:
       # Checks-out your repo so your workflow can access it.
       - uses: actions/checkout@v3
 
-      # Setup pnpm
-      - uses: pnpm/action-setup@v2
-        with:
-          version: 8
-
       # Fetch repo with tags, converting from shallow to complete
       - name: Prepare repository
         run: git fetch --unshallow --tags
 
       # Download Node and configure for GitHub Packages
-      - name: Use Node.js 16.x
+      - name: Use Node.js 16
         uses: actions/setup-node@v3
         with:
-          node-version: 16.x
+          node-version: 16
 
       # Cache dependencies and build outputs to improve workflow execution time
       - name: Cache node modules
         uses: actions/cache@v3
         with:
           path: node_modules
-          key: pnpm-deps-${{ hashFiles('pnpm-lock.yaml') }}
+          key: yarn-deps-${{ hashFiles('yarn.lock') }}
           restore-keys: |
-            pnpm-deps-${{ hashFiles('pnpm-lock.yaml') }}
+            yarn-deps-${{ hashFiles('yarn.lock') }}
 
       - name: Install dependencies
-        run: pnpm install --frozen-lockfile
+        run: yarn install --frozen-lockfile --ignore-engines
 
       # Bump version and create a release
       - name: Bump version
