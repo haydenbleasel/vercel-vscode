@@ -1,3 +1,26 @@
+# v1.0.22 (Sat Oct 14 2023)
+
+#### ⚠️ Pushed to `main`
+
+- Update release.yaml ([@haydenbleasel](https://github.com/haydenbleasel))
+- Change owner ([@haydenbleasel](https://github.com/haydenbleasel))
+- Update Harmony ([@haydenbleasel](https://github.com/haydenbleasel))
+- Switch to pnpm ([@haydenbleasel](https://github.com/haydenbleasel))
+
+#### 🔩 Dependency Updates
+
+- Bump postcss from 8.4.25 to 8.4.31 [#70](https://github.com/haydenbleasel/vercel-vscode/pull/70) ([@dependabot[bot]](https://github.com/dependabot[bot]))
+- Bump word-wrap from 1.2.3 to 1.2.4 [#69](https://github.com/haydenbleasel/vercel-vscode/pull/69) ([@dependabot[bot]](https://github.com/dependabot[bot]))
+- Bump semver from 6.3.0 to 6.3.1 [#68](https://github.com/haydenbleasel/vercel-vscode/pull/68) ([@dependabot[bot]](https://github.com/dependabot[bot]))
+- Bump stylelint from 15.6.2 to 15.10.1 [#67](https://github.com/haydenbleasel/vercel-vscode/pull/67) ([@dependabot[bot]](https://github.com/dependabot[bot]))
+
+#### Authors: 2
+
+- [@dependabot[bot]](https://github.com/dependabot[bot])
+- Hayden Bleasel ([@haydenbleasel](https://github.com/haydenbleasel))
+
+---
+
 # v1.0.21 (Sat May 20 2023)
 
 #### ⚠️ Pushed to `main`
