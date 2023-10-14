@@ -53,7 +53,7 @@ jobs:
             pnpm-deps-${{ hashFiles('pnpm-lock.yaml') }}
 
       - name: Install dependencies
-        run: pnpm install --frozen-lockfile --ignore-engines
+        run: pnpm install
 
       # Bump version and create a release
       - name: Bump version
