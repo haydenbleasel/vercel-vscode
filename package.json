@@ -20,7 +20,7 @@
   "main": "./out/extension.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/beskar-co/vercel-vscode"
+    "url": "https://github.com/haydenbleasel/vercel-vscode"
   },
   "contributes": {
     "configuration": {
