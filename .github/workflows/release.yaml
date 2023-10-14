@@ -61,8 +61,8 @@ jobs:
 
       # Build a package
       - name: Build
-        run: npx vsce package
+        run: npx @vscode/vsce package
 
       # Publish a package
       - name: Publish
-        run: npx vsce publish -p ${{ secrets.AZURE_PAT }}
+        run: npx @vscode/vsce publish -p ${{ secrets.AZURE_PAT }}
