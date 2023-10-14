@@ -1,3 +1,15 @@
+# v1.0.23 (Sat Oct 14 2023)
+
+#### ⚠️ Pushed to `main`
+
+- Update release.yaml ([@haydenbleasel](https://github.com/haydenbleasel))
+
+#### Authors: 1
+
+- Hayden Bleasel ([@haydenbleasel](https://github.com/haydenbleasel))
+
+---
+
 # v1.0.22 (Sat Oct 14 2023)
 
 #### ⚠️ Pushed to `main`
