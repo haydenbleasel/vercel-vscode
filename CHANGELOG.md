@@ -1,3 +1,16 @@
+# v1.0.26 (Sat Oct 14 2023)
+
+#### ⚠️ Pushed to `main`
+
+- Update README.md ([@haydenbleasel](https://github.com/haydenbleasel))
+- Revert to Yarn ([@haydenbleasel](https://github.com/haydenbleasel))
+
+#### Authors: 1
+
+- Hayden Bleasel ([@haydenbleasel](https://github.com/haydenbleasel))
+
+---
+
 # v1.0.25 (Sat Oct 14 2023)
 
 #### ⚠️ Pushed to `main`
