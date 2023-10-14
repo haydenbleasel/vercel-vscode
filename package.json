@@ -51,12 +51,12 @@
   },
   "dependencies": {
     "cross-fetch": "^3.1.6",
-    "date-fns": "^2.30.0"
+    "date-fns": "^2.30.0",
+    "eslint-config-harmony": "^3.0.3"
   },
   "devDependencies": {
     "@auto-it/first-time-contributor": "^10.46.0",
     "@auto-it/npm": "^10.46.0",
-    "@beskar-labs/harmony": "^2.2.8",
     "@types/node": "20.x",
     "@types/vscode": "1.72.0",
     "auto": "^10.46.0",
@@ -67,7 +67,7 @@
     "tsup": "^6.7.0",
     "typescript": "^5.0.4"
   },
-  "prettier": "@beskar-labs/harmony/prettier",
+  "prettier": "eslint-config-harmony/prettier",
   "author": "Hayden Bleasel <hello@haydenbleasel.com>",
   "contributors": [
     "Anna Zhang <annazhang343@gmail.com>"
