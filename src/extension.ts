@@ -21,9 +21,9 @@ export const activate = async (): Promise<void> => {
   console.log('Loaded Vercel Access Token', projectId);
 
   if (!accessToken) {
-    toast
-      .error('Please set your Vercel Access Token in the extension settings')
-      .catch(toast.error);
+    await toast.error(
+      'Please set your Vercel Access Token in the extension settings'
+    );
     return;
   }
 

@@ -2,7 +2,6 @@ import { formatDistance } from 'date-fns';
 import fetchDeployments from '@/utils/fetchDeployments';
 import parseError from '@/utils/parseError';
 import toSentenceCase from '@/utils/sentenceCase';
-import toast from './toast';
 import { triangle } from './const';
 import type { StatusBarItem } from 'vscode';
 
@@ -38,7 +37,7 @@ const updateStatus = async ({
   } catch (error) {
     const message = parseError(error);
 
-    await toast.error(message);
+    console.error(message);
   }
 };
 
