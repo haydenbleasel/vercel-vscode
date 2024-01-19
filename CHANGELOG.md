@@ -1,3 +1,15 @@
+# v1.0.29 (Fri Jan 19 2024)
+
+#### ⚠️ Pushed to `main`
+
+- Misc improvements ([@haydenbleasel](https://github.com/haydenbleasel))
+
+#### Authors: 1
+
+- Hayden Bleasel ([@haydenbleasel](https://github.com/haydenbleasel))
+
+---
+
 # v1.0.28 (Fri Jan 19 2024)
 
 #### ⚠️ Pushed to `main`
