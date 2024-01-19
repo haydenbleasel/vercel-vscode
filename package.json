@@ -5,7 +5,7 @@
   "displayName": "Vercel for VS Code",
   "description": "A VS Code extension for Vercel deployment status.",
   "icon": "icon.png",
-  "version": "1.0.27",
+  "version": "1.0.28",
   "engines": {
     "vscode": "^1.72.0"
   },
