@@ -29,11 +29,13 @@ const updateStatus = async ({
       : 'a while';
 
     statusBarItem.text = `${triangle} ${toSentenceCase(state)}`;
-    statusBarItem.tooltip = `${
-      name ?? 'unknown repo'
-    } (${state.toLowerCase()}) ${formattedDate} ago via ${
-      source ?? 'unknown source'
-    }`;
+    statusBarItem.tooltip = [
+      name ?? 'unknown repo',
+      `(${state.toLowerCase()})`,
+      `${formattedDate} ago`,
+      'via',
+      source ?? 'unknown source',
+    ].join(' ');
   } catch (error) {
     const message = parseError(error);
 

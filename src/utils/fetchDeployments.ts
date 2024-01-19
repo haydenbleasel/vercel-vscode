@@ -8,11 +8,11 @@ type VercelResponse = {
     createdAt?: string;
     state:
       | 'BUILDING'
+      | 'CANCELED'
       | 'ERROR'
       | 'INITIALIZING'
       | 'QUEUED'
-      | 'READY'
-      | 'CANCELED';
+      | 'READY';
   }[];
 };
 

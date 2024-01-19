@@ -1,13 +1,13 @@
 import { workspace } from 'vscode';
 import getVercelJson from './vercelJson';
 
-const app = 'vercelVSCode';
+const app = workspace.getConfiguration('vercelVSCode');
 
 export const getProjectId = async (): Promise<string | undefined> => {
-  const workspaceProjectId = workspace.getConfiguration(app).get('projectId');
+  const workspaceProjectId = app.get('projectId');
 
-  if (workspaceProjectId) {
-    return workspaceProjectId as string;
+  if (typeof workspaceProjectId === 'string' && workspaceProjectId) {
+    return workspaceProjectId;
   }
 
   const vercelJson = await getVercelJson();
@@ -16,10 +16,10 @@ export const getProjectId = async (): Promise<string | undefined> => {
 };
 
 export const getTeamId = async (): Promise<string | undefined> => {
-  const workspaceTeamId = workspace.getConfiguration(app).get('teamId');
+  const workspaceTeamId = app.get('teamId');
 
-  if (workspaceTeamId) {
-    return workspaceTeamId as string;
+  if (typeof workspaceTeamId === 'string' && workspaceTeamId) {
+    return workspaceTeamId;
   }
 
   const vercelJson = await getVercelJson();
@@ -27,5 +27,4 @@ export const getTeamId = async (): Promise<string | undefined> => {
   return vercelJson?.orgId;
 };
 
-export const getAccessToken = (): string | undefined =>
-  workspace.getConfiguration(app).get('accessToken');
+export const getAccessToken = (): string | undefined => app.get('accessToken');
