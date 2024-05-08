@@ -1,3 +1,15 @@
+# v1.0.31 (Wed May 08 2024)
+
+#### ⚠️ Pushed to `main`
+
+- Fix vs code types version ([@haydenbleasel](https://github.com/haydenbleasel))
+
+#### Authors: 1
+
+- Hayden Bleasel ([@haydenbleasel](https://github.com/haydenbleasel))
+
+---
+
 # v1.0.30 (Wed May 08 2024)
 
 #### ⚠️ Pushed to `main`
