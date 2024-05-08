@@ -58,7 +58,7 @@
     "@auto-it/first-time-contributor": "^11.1.6",
     "@auto-it/npm": "^11.1.6",
     "@types/node": "20.x",
-    "@types/vscode": "1.89.0",
+    "@types/vscode": "1.72.0",
     "auto": "^11.1.6",
     "eslint": "^8.51.0",
     "jest": "^29.7.0",
