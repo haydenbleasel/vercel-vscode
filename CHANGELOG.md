@@ -1,3 +1,16 @@
+# v1.0.30 (Wed May 08 2024)
+
+#### ⚠️ Pushed to `main`
+
+- Bump deps, regen lockfile ([@haydenbleasel](https://github.com/haydenbleasel))
+- Resolves #73 ([@haydenbleasel](https://github.com/haydenbleasel))
+
+#### Authors: 1
+
+- Hayden Bleasel ([@haydenbleasel](https://github.com/haydenbleasel))
+
+---
+
 # v1.0.29 (Fri Jan 19 2024)
 
 #### ⚠️ Pushed to `main`
