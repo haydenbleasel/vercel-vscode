@@ -51,21 +51,21 @@
   },
   "dependencies": {
     "cross-fetch": "^4.0.0",
-    "date-fns": "^2.30.0",
-    "eslint-config-harmony": "^3.0.3"
+    "date-fns": "^3.6.0",
+    "eslint-config-harmony": "^3.1.11"
   },
   "devDependencies": {
-    "@auto-it/first-time-contributor": "^11.0.4",
-    "@auto-it/npm": "^11.0.4",
+    "@auto-it/first-time-contributor": "^11.1.6",
+    "@auto-it/npm": "^11.1.6",
     "@types/node": "20.x",
-    "@types/vscode": "1.72.0",
-    "auto": "^11.0.4",
+    "@types/vscode": "1.89.0",
+    "auto": "^11.1.6",
     "eslint": "^8.51.0",
     "jest": "^29.7.0",
-    "prettier": "^3.0.3",
-    "stylelint": "^15.10.3",
-    "tsup": "^7.2.0",
-    "typescript": "^5.2.2"
+    "prettier": "^3.2.5",
+    "stylelint": "^16.5.0",
+    "tsup": "^8.0.2",
+    "typescript": "^5.4.5"
   },
   "prettier": "eslint-config-harmony/prettier",
   "author": "Hayden Bleasel <hello@haydenbleasel.com>",
