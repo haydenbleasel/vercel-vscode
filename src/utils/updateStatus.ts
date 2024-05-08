@@ -20,6 +20,8 @@ const updateStatus = async ({
     const deployments = await fetchDeployments(accessToken, projectId, teamId);
 
     if (!deployments?.length) {
+      statusBarItem.text = `${triangle} No deployments`;
+      statusBarItem.tooltip = 'No deployments found for this project.';
       return;
     }
 
@@ -38,6 +40,9 @@ const updateStatus = async ({
     ].join(' ');
   } catch (error) {
     const message = parseError(error);
+
+    statusBarItem.text = `${triangle} Error`;
+    statusBarItem.tooltip = message;
 
     console.error(message);
   }
