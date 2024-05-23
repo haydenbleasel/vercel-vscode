@@ -1,3 +1,18 @@
+# v1.0.32 (Thu May 23 2024)
+
+#### ⚠️ Pushed to `main`
+
+- Update README.md ([@haydenbleasel](https://github.com/haydenbleasel))
+- Update package.json ([@haydenbleasel](https://github.com/haydenbleasel))
+- Improve README, for #73 ([@haydenbleasel](https://github.com/haydenbleasel))
+- Update settings.json ([@haydenbleasel](https://github.com/haydenbleasel))
+
+#### Authors: 1
+
+- Hayden Bleasel ([@haydenbleasel](https://github.com/haydenbleasel))
+
+---
+
 # v1.0.31 (Wed May 08 2024)
 
 #### ⚠️ Pushed to `main`
