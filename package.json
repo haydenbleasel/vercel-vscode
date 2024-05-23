@@ -47,7 +47,8 @@
   "scripts": {
     "vscode:prepublish": "npm run build",
     "build": "tsup",
-    "watch": "tsup"
+    "watch": "tsup",
+    "bump-deps": "npx npm-check-updates -u -x @types/vscode,eslint && pnpm install"
   },
   "dependencies": {
     "cross-fetch": "^4.0.0",
