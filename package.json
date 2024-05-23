@@ -48,7 +48,7 @@
     "vscode:prepublish": "npm run build",
     "build": "tsup",
     "watch": "tsup",
-    "bump-deps": "npx npm-check-updates -u -x @types/vscode,eslint && pnpm install"
+    "bump-deps": "npx npm-check-updates -u -x @types/vscode,eslint && yarn install"
   },
   "dependencies": {
     "cross-fetch": "^4.0.0",
