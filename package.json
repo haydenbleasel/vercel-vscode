@@ -52,5 +52,12 @@
     "ultracite": "4.1.4"
   },
   "author": "Hayden Bleasel <hello@haydenbleasel.com>",
-  "contributors": ["Anna Zhang <annazhang343@gmail.com>"]
+  "contributors": ["Anna Zhang <annazhang343@gmail.com>"],
+  "auto": {
+    "plugins": ["all-contributors", "first-time-contributor", "released"],
+    "owner": "haydenbleasel",
+    "repo": "vercel-vscode",
+    "name": "Hayden Bleasel",
+    "email": "hello@haydenbleasel.com"
+  }
 }
