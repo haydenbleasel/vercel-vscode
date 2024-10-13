@@ -53,7 +53,7 @@ jobs:
             ${{ runner.os }}-pnpm-
 
       - name: Install dependencies
-        run: pnpm install --ignore-engines
+        run: pnpm install
 
       # Bump version and create a release
       - name: Bump version
