@@ -1,3 +1,15 @@
+# v2.0.2 (Sun Oct 13 2024)
+
+#### ⚠️ Pushed to `main`
+
+- Switch to npm publishing, revert workflow change ([@haydenbleasel](https://github.com/haydenbleasel))
+
+#### Authors: 1
+
+- Hayden Bleasel ([@haydenbleasel](https://github.com/haydenbleasel))
+
+---
+
 # v2.0.1 (Sun Oct 13 2024)
 
 #### ⚠️ Pushed to `main`
