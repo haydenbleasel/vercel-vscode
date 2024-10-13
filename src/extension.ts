@@ -1,11 +1,9 @@
 import updateStatus from '@/utils/updateStatus';
-/* eslint-disable require-atomic-updates */
 import { StatusBarAlignment, window } from 'vscode';
 import { getAccessToken, getProjectId, getTeamId } from './utils/config';
 import { triangle } from './utils/const';
 import { log } from './utils/log';
 
-// eslint-disable-next-line no-undef
 let interval: NodeJS.Timer | null = null;
 
 export const activate = async (): Promise<void> => {
