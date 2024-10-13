@@ -55,18 +55,14 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
-      # Add alias npm=pnpm
-      - name: Set npm alias
-        run: alias npm=pnpm
-
       # Bump version and create a release
       - name: Bump version
         run: npx auto shipit
 
       # Build a package
       - name: Build
-        run: npx @vscode/vsce package
+        run: npx @vscode/vsce package  --no-dependencies
 
       # Publish a package
       - name: Publish
-        run: npx @vscode/vsce publish -p ${{ secrets.AZURE_PAT }}
+        run: npx @vscode/vsce publish -p ${{ secrets.AZURE_PAT }} --no-dependencies
