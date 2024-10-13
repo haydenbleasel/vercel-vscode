@@ -9,8 +9,13 @@
   "engines": {
     "vscode": "^1.72.0"
   },
-  "categories": ["Testing", "Other"],
-  "activationEvents": ["onStartupFinished"],
+  "categories": [
+    "Testing",
+    "Other"
+  ],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
   "license": "ISC",
   "main": "./out/extension.js",
   "repository": {
@@ -43,7 +48,6 @@
   "devDependencies": {
     "@auto-it/all-contributors": "^11.2.1",
     "@auto-it/first-time-contributor": "^11.2.1",
-    "@auto-it/git-tag": "^11.2.1",
     "@auto-it/npm": "^11.2.1",
     "@biomejs/biome": "1.9.3",
     "@types/node": "22.x",
@@ -54,10 +58,12 @@
     "ultracite": "4.1.4"
   },
   "author": "Hayden Bleasel <hello@haydenbleasel.com>",
-  "contributors": ["Anna Zhang <annazhang343@gmail.com>"],
+  "contributors": [
+    "Anna Zhang <annazhang343@gmail.com>"
+  ],
   "auto": {
     "plugins": [
-      "git-tag",
+      "npm",
       "all-contributors",
       "first-time-contributor",
       "released"
