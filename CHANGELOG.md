@@ -1,3 +1,15 @@
+# v2.0.1 (Sun Oct 13 2024)
+
+#### ⚠️ Pushed to `main`
+
+- Update release.yaml ([@haydenbleasel](https://github.com/haydenbleasel))
+
+#### Authors: 1
+
+- Hayden Bleasel ([@haydenbleasel](https://github.com/haydenbleasel))
+
+---
+
 # v2.0.0 (Sun Oct 13 2024)
 
 #### 💥 Breaking Change
