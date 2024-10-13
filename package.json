@@ -9,13 +9,8 @@
   "engines": {
     "vscode": "^1.72.0"
   },
-  "categories": [
-    "Testing",
-    "Other"
-  ],
-  "activationEvents": [
-    "onStartupFinished"
-  ],
+  "categories": ["Testing", "Other"],
+  "activationEvents": ["onStartupFinished"],
   "license": "ISC",
   "main": "./out/extension.js",
   "repository": {
@@ -47,7 +42,7 @@
   "scripts": {
     "vscode:prepublish": "npm run build",
     "build": "tsup",
-    "watch": "tsup",
+    "dev": "tsup",
     "bump-deps": "npx npm-check-updates -u -x @types/vscode,eslint && pnpm install"
   },
   "dependencies": {
@@ -66,7 +61,5 @@
     "ultracite": "4.1.4"
   },
   "author": "Hayden Bleasel <hello@haydenbleasel.com>",
-  "contributors": [
-    "Anna Zhang <annazhang343@gmail.com>"
-  ]
+  "contributors": ["Anna Zhang <annazhang343@gmail.com>"]
 }
