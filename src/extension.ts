@@ -1,8 +1,13 @@
-import updateStatus from '@/utils/updateStatus';
 import { StatusBarAlignment, window } from 'vscode';
-import { getAccessToken, getProjectId, getTeamId } from './utils/config';
+import {
+  getAccessToken,
+  getDeploymentStatus,
+  getProjectFiles,
+  getProjectPaths,
+} from './utils/config';
 import { triangle } from './utils/const';
 import { log } from './utils/log';
+import parseError from './utils/parseError';
 
 let interval: NodeJS.Timer | null = null;
 
@@ -11,28 +16,34 @@ export const activate = async (): Promise<void> => {
     StatusBarAlignment.Right,
     100
   );
-
-  statusBarItem.text = `${triangle} Loading Project`;
-  statusBarItem.tooltip = 'Looking for Vercel project ID...';
+  statusBarItem.text = `${triangle} Initializing`;
+  statusBarItem.tooltip = 'Please wait...';
   statusBarItem.show();
 
-  const projectId = await getProjectId();
+  // Locate all `.vercel/project.json` project paths
+  statusBarItem.text = `${triangle} Locating projects`;
+  statusBarItem.tooltip = 'Looking for Vercel projects...';
+  const projectPaths = await getProjectPaths();
+  log('Located Vercel projects', projectPaths);
 
-  log('Loaded Vercel Project ID', projectId);
-
-  if (!projectId) {
+  if (!projectPaths.length) {
     statusBarItem.text = `${triangle} Error`;
     statusBarItem.tooltip =
-      'Vercel project ID not found. Please run `vercel link` in your project directory to link your project to Vercel.';
+      'No Vercel projects found. Please run `vercel link` in your project directory to link your project to Vercel.';
     return;
   }
 
+  // Load all project files
+  statusBarItem.text = `${triangle} Loading projects`;
+  statusBarItem.tooltip = 'Loading Vercel projects...';
+  const projectFiles = await getProjectFiles(projectPaths);
+  log('Loaded Vercel project files', projectFiles);
+
+  // Load access token
   statusBarItem.text = `${triangle} Loading Token`;
   statusBarItem.tooltip = 'Looking for Vercel access token...';
-
   const accessToken = getAccessToken();
-
-  log('Loaded Vercel Access Token', projectId);
+  log('Loaded Vercel access token', accessToken);
 
   if (!accessToken) {
     statusBarItem.text = `${triangle} Error`;
@@ -41,26 +52,28 @@ export const activate = async (): Promise<void> => {
     return;
   }
 
-  statusBarItem.text = `${triangle} Loading Team ID`;
-  statusBarItem.tooltip = 'Looking for Vercel team ID...';
-
-  const teamId = await getTeamId();
-
-  if (teamId) {
-    log('Loaded Vercel Team ID', teamId);
-  }
-
+  // Load deployment statuses
   statusBarItem.text = `${triangle} Loading`;
   statusBarItem.tooltip = 'Loading Vercel deployment status...';
   statusBarItem.show();
 
-  const update = async () =>
-    updateStatus({
-      statusBarItem,
-      accessToken,
-      projectId,
-      teamId,
-    });
+  const update = async () => {
+    try {
+      const statuses: string[] = [];
+
+      for (const projectFile of projectFiles) {
+        const status = await getDeploymentStatus(projectFile, accessToken);
+
+        statuses.push(status);
+      }
+
+      statusBarItem.text = `${triangle} Deployments`;
+      statusBarItem.tooltip = statuses.join('\n');
+    } catch (error) {
+      statusBarItem.text = `${triangle} Error`;
+      statusBarItem.tooltip = parseError(error);
+    }
+  };
 
   await update();
 
