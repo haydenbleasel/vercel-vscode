@@ -84,6 +84,6 @@ export const activate = async (): Promise<void> => {
 
 export const deactivate = (): void => {
   if (interval) {
-    clearInterval(interval);
+    clearInterval(interval as NodeJS.Timeout);
   }
 };
