@@ -55,6 +55,10 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
+      # Add alias npm=pnpm
+      - name: Set npm alias
+        run: alias npm=pnpm
+
       # Bump version and create a release
       - name: Bump version
         run: npx auto shipit
