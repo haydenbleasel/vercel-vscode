@@ -38,17 +38,22 @@ jobs:
         with:
           node-version: 20
 
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 9
+
       # Cache dependencies and build outputs to improve workflow execution time
-      - name: Cache node modules
+      - name: Cache pnpm modules
         uses: actions/cache@v4
         with:
-          path: node_modules
-          key: yarn-deps-${{ hashFiles('yarn.lock') }}
+          path: ~/.pnpm-store
+          key: ${{ runner.os }}-pnpm-${{ hashFiles('**/pnpm-lock.yaml') }}
           restore-keys: |
-            yarn-deps-${{ hashFiles('yarn.lock') }}
+            ${{ runner.os }}-pnpm-
 
       - name: Install dependencies
-        run: yarn install --frozen-lockfile --ignore-engines
+        run: pnpm install --ignore-engines
 
       # Bump version and create a release
       - name: Bump version
