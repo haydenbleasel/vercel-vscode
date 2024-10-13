@@ -52,16 +52,16 @@
   },
   "dependencies": {
     "cross-fetch": "^4.0.0",
-    "date-fns": "^3.6.0"
+    "date-fns": "^4.1.0"
   },
   "devDependencies": {
-    "@auto-it/first-time-contributor": "^11.1.6",
-    "@auto-it/npm": "^11.1.6",
-    "@types/node": "20.x",
+    "@auto-it/first-time-contributor": "^11.2.1",
+    "@auto-it/npm": "^11.2.1",
+    "@types/node": "22.x",
     "@types/vscode": "1.72.0",
-    "auto": "^11.1.6",
-    "tsup": "^8.0.2",
-    "typescript": "^5.4.5"
+    "auto": "^11.2.1",
+    "tsup": "^8.3.0",
+    "typescript": "^5.6.3"
   },
   "prettier": "eslint-config-harmony/prettier",
   "author": "Hayden Bleasel <hello@haydenbleasel.com>",
