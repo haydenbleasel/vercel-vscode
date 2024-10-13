@@ -8,10 +8,8 @@ A VS Code extension for Vercel deployment status.
 
 To setup this extension, you'll need the following:
 
-1. VS Code, version 1.72.0 or above.
-2. A Vercel Token, which you can create in your [Vercel account settings](https://vercel.com/account/tokens).
-3. A Vercel Project ID, which you can find in your Vercel project under the "General" tab.
-4. Optionally a Vercel Team ID, which you can find in your Vercel team settings under the "General" tab.
+1. VSCode, version 1.72.0 or above.
+2. A Vercel Access Token, which you can create in your [Vercel account settings](https://vercel.com/account/tokens).
 
 ## Installation
 
