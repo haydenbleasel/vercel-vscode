@@ -1,5 +1,6 @@
-import { workspace, Uri } from 'vscode';
 import parseError from '@/utils/parseError';
+import { Uri, workspace } from 'vscode';
+import { log } from './log';
 import toast from './toast';
 
 export type VercelProjectJson = {
@@ -10,7 +11,7 @@ export type VercelProjectJson = {
 const getVercelJson = async (): Promise<VercelProjectJson | undefined> => {
   const root = workspace.workspaceFolders?.[0];
 
-  console.log('Checking Vercel Project JSON from root', root?.uri.path);
+  log('Checking Vercel Project JSON from root', root?.uri.path);
 
   if (!root) {
     return undefined;
@@ -29,8 +30,8 @@ const getVercelJson = async (): Promise<VercelProjectJson | undefined> => {
 
   try {
     const stringJson: string = Buffer.from(vercelProjectJson).toString('utf8');
-    const parsedVercelProjectJSON = JSON.parse(stringJson) as VercelProjectJson;
-    return parsedVercelProjectJSON;
+    const parsedVercelProjectJson = JSON.parse(stringJson) as VercelProjectJson;
+    return parsedVercelProjectJson;
   } catch (error) {
     const message = parseError(error);
     await toast.error(message);

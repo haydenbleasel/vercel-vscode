@@ -1,8 +1,9 @@
+import updateStatus from '@/utils/updateStatus';
 /* eslint-disable require-atomic-updates */
 import { StatusBarAlignment, window } from 'vscode';
-import updateStatus from '@/utils/updateStatus';
 import { getAccessToken, getProjectId, getTeamId } from './utils/config';
 import { triangle } from './utils/const';
+import { log } from './utils/log';
 
 // eslint-disable-next-line no-undef
 let interval: NodeJS.Timer | null = null;
@@ -19,7 +20,7 @@ export const activate = async (): Promise<void> => {
 
   const projectId = await getProjectId();
 
-  console.log('Loaded Vercel Project ID', projectId);
+  log('Loaded Vercel Project ID', projectId);
 
   if (!projectId) {
     statusBarItem.text = `${triangle} Error`;
@@ -33,7 +34,7 @@ export const activate = async (): Promise<void> => {
 
   const accessToken = getAccessToken();
 
-  console.log('Loaded Vercel Access Token', projectId);
+  log('Loaded Vercel Access Token', projectId);
 
   if (!accessToken) {
     statusBarItem.text = `${triangle} Error`;
@@ -48,7 +49,7 @@ export const activate = async (): Promise<void> => {
   const teamId = await getTeamId();
 
   if (teamId) {
-    console.log('Loaded Vercel Team ID', teamId);
+    log('Loaded Vercel Team ID', teamId);
   }
 
   statusBarItem.text = `${triangle} Loading`;
