@@ -9,8 +9,13 @@
   "engines": {
     "vscode": "^1.72.0"
   },
-  "categories": ["Testing", "Other"],
-  "activationEvents": ["onStartupFinished"],
+  "categories": [
+    "Testing",
+    "Other"
+  ],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
   "license": "ISC",
   "main": "./out/extension.js",
   "repository": {
@@ -47,7 +52,8 @@
   },
   "dependencies": {
     "cross-fetch": "^4.0.0",
-    "date-fns": "^4.1.0"
+    "date-fns": "^4.1.0",
+    "zod": "^3.23.8"
   },
   "devDependencies": {
     "@auto-it/first-time-contributor": "^11.2.1",
@@ -61,5 +67,7 @@
     "ultracite": "4.1.4"
   },
   "author": "Hayden Bleasel <hello@haydenbleasel.com>",
-  "contributors": ["Anna Zhang <annazhang343@gmail.com>"]
+  "contributors": [
+    "Anna Zhang <annazhang343@gmail.com>"
+  ]
 }

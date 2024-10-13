@@ -1,12 +1,15 @@
 import { formatDistance } from 'date-fns';
 import { type Uri, workspace } from 'vscode';
+import { z } from 'zod';
 import fetchDeployments from './fetchDeployments';
 import parseError from './parseError';
 
-export type VercelProjectJson = {
-  projectId: string;
-  orgId: string;
-};
+const vercelSchema = z.object({
+  projectId: z.string(),
+  orgId: z.string(),
+});
+
+type VercelProjectJson = z.infer<typeof vercelSchema>;
 
 export const getProjectPaths = async (): Promise<Uri[]> =>
   await workspace.findFiles('**/.vercel/project.json', '**/node_modules/**');
@@ -18,8 +21,10 @@ export const getProjectFiles = async (
     paths.map(async (path) => {
       const file = await workspace.fs.readFile(path);
       const stringJson = Buffer.from(file).toString('utf8');
+      const json = JSON.parse(stringJson);
+      const parsed = vercelSchema.parse(json);
 
-      return JSON.parse(stringJson) as VercelProjectJson;
+      return parsed;
     })
   );
 
@@ -30,8 +35,8 @@ export const getDeploymentStatus = async (
   try {
     const deployments = await fetchDeployments(
       accessToken,
-      projectFile.projectId ?? '',
-      projectFile.orgId ?? ''
+      projectFile.projectId,
+      projectFile.orgId
     );
 
     if (!deployments?.length) {
