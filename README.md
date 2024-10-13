@@ -24,7 +24,7 @@ code --install-extension haydenbleasel.vercel-vscode
 ## Configuration
 
 1. Open the extension settings and enter your token. **It's recommended to put this in your User Settings (not Workspace Settings) so it is not shared with others**.
-2. In your terminal, run `vercel link`. This will create a file at `.vercel/project.json` with your project ID (`projectId`) and team ID (called `orgId`). If you'd prefer, you can also add these manually to your VSCode settings.
+2. In your terminal, run `vercel link`. This will create a file at `.vercel/project.json` with your Project and Team ID.
 3. Reload VSCode to apply the changes and start using the extension.
 
 ## Development

@@ -9,13 +9,8 @@
   "engines": {
     "vscode": "^1.72.0"
   },
-  "categories": [
-    "Testing",
-    "Other"
-  ],
-  "activationEvents": [
-    "onStartupFinished"
-  ],
+  "categories": ["Testing", "Other"],
+  "activationEvents": ["onStartupFinished"],
   "license": "ISC",
   "main": "./out/extension.js",
   "repository": {
@@ -30,16 +25,6 @@
           "type": "string",
           "default": "",
           "description": "Your Vercel Access Token"
-        },
-        "vercelVSCode.projectId": {
-          "type": "string",
-          "default": "",
-          "description": "Your Vercel Project ID"
-        },
-        "vercelVSCode.teamId": {
-          "type": "string",
-          "default": "",
-          "description": "Your Vercel Team ID"
         }
       }
     }
@@ -67,7 +52,5 @@
     "ultracite": "4.1.4"
   },
   "author": "Hayden Bleasel <hello@haydenbleasel.com>",
-  "contributors": [
-    "Anna Zhang <annazhang343@gmail.com>"
-  ]
+  "contributors": ["Anna Zhang <annazhang343@gmail.com>"]
 }
