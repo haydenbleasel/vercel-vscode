@@ -1,3 +1,35 @@
+# v2.0.0 (Sun Oct 13 2024)
+
+#### 💥 Breaking Change
+
+- Update README.md [#81](https://github.com/haydenbleasel/vercel-vscode/pull/81) ([@haydenbleasel](https://github.com/haydenbleasel))
+
+#### 🚀 Enhancement
+
+- 74 monorepo support [#78](https://github.com/haydenbleasel/vercel-vscode/pull/78) ([@haydenbleasel](https://github.com/haydenbleasel))
+
+#### ⚠️ Pushed to `main`
+
+- Attempt to fix deps ([@haydenbleasel](https://github.com/haydenbleasel))
+- Merge autorc into package json ([@haydenbleasel](https://github.com/haydenbleasel))
+- Update .autorc ([@haydenbleasel](https://github.com/haydenbleasel))
+- Update release.yaml ([@haydenbleasel](https://github.com/haydenbleasel))
+- Attempt aliasing npm ([@haydenbleasel](https://github.com/haydenbleasel))
+- Update screenshot, fix release script ([@haydenbleasel](https://github.com/haydenbleasel))
+
+#### 🔩 Dependency Updates
+
+- Bump rollup from 4.17.2 to 4.22.4 [#77](https://github.com/haydenbleasel/vercel-vscode/pull/77) ([@dependabot[bot]](https://github.com/dependabot[bot]))
+- Bump braces from 3.0.2 to 3.0.3 [#76](https://github.com/haydenbleasel/vercel-vscode/pull/76) ([@dependabot[bot]](https://github.com/dependabot[bot]))
+- Bump micromatch from 4.0.5 to 4.0.8 [#75](https://github.com/haydenbleasel/vercel-vscode/pull/75) ([@dependabot[bot]](https://github.com/dependabot[bot]))
+
+#### Authors: 2
+
+- [@dependabot[bot]](https://github.com/dependabot[bot])
+- Hayden Bleasel ([@haydenbleasel](https://github.com/haydenbleasel))
+
+---
+
 # v1.0.32 (Thu May 23 2024)
 
 #### ⚠️ Pushed to `main`
