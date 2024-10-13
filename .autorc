@@ -8,5 +8,6 @@
   "owner": "haydenbleasel",
   "repo": "vercel-vscode",
   "name": "Hayden Bleasel",
-  "email": "hello@haydenbleasel.com"
+  "email": "hello@haydenbleasel.com",
+  "onlyPublishWithReleaseLabel": false
 }
