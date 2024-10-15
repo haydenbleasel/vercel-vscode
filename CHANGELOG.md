@@ -1,3 +1,20 @@
+# v1.0.34 (Tue Oct 15 2024)
+
+#### ⚠️ Pushed to `main`
+
+- Resolves #82 ([@haydenbleasel](https://github.com/haydenbleasel))
+
+#### 🔩 Dependency Updates
+
+- Bump micromatch from 4.0.7 to 4.0.8 in the npm_and_yarn group [#80](https://github.com/haydenbleasel/vercel-vscode/pull/80) ([@dependabot[bot]](https://github.com/dependabot[bot]))
+
+#### Authors: 2
+
+- [@dependabot[bot]](https://github.com/dependabot[bot])
+- Hayden Bleasel ([@haydenbleasel](https://github.com/haydenbleasel))
+
+---
+
 # v2.0.2 (Sun Oct 13 2024)
 
 #### ⚠️ Pushed to `main`
