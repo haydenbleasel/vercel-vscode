@@ -9,5 +9,5 @@ export default defineConfig({
   clean: true,
   external: ['vscode'],
   format: 'cjs',
-  noExternal: ['date-fns', 'cross-fetch'],
+  noExternal: ['date-fns', 'cross-fetch', 'zod'],
 });
