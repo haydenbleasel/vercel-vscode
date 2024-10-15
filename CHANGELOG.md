@@ -1,3 +1,15 @@
+# v1.0.35 (Tue Oct 15 2024)
+
+#### ⚠️ Pushed to `main`
+
+- Fix changelog ([@haydenbleasel](https://github.com/haydenbleasel))
+
+#### Authors: 1
+
+- Hayden Bleasel ([@haydenbleasel](https://github.com/haydenbleasel))
+
+---
+
 # v1.0.34 (Tue Oct 15 2024)
 
 #### ⚠️ Pushed to `main`
