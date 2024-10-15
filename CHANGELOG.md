@@ -15,46 +15,17 @@
 
 ---
 
-# v2.0.2 (Sun Oct 13 2024)
+# v1.0.33 (Sun Oct 13 2024)
 
 #### ⚠️ Pushed to `main`
 
 - Switch to npm publishing, revert workflow change ([@haydenbleasel](https://github.com/haydenbleasel))
-
-#### Authors: 1
-
-- Hayden Bleasel ([@haydenbleasel](https://github.com/haydenbleasel))
-
----
-
-# v2.0.1 (Sun Oct 13 2024)
-
-#### ⚠️ Pushed to `main`
-
 - Update release.yaml ([@haydenbleasel](https://github.com/haydenbleasel))
-
-#### Authors: 1
-
-- Hayden Bleasel ([@haydenbleasel](https://github.com/haydenbleasel))
-
----
-
-# v2.0.0 (Sun Oct 13 2024)
-
-#### 💥 Breaking Change
-
 - Update README.md [#81](https://github.com/haydenbleasel/vercel-vscode/pull/81) ([@haydenbleasel](https://github.com/haydenbleasel))
-
-#### 🚀 Enhancement
-
 - 74 monorepo support [#78](https://github.com/haydenbleasel/vercel-vscode/pull/78) ([@haydenbleasel](https://github.com/haydenbleasel))
-
-#### ⚠️ Pushed to `main`
-
 - Attempt to fix deps ([@haydenbleasel](https://github.com/haydenbleasel))
 - Merge autorc into package json ([@haydenbleasel](https://github.com/haydenbleasel))
 - Update .autorc ([@haydenbleasel](https://github.com/haydenbleasel))
-- Update release.yaml ([@haydenbleasel](https://github.com/haydenbleasel))
 - Attempt aliasing npm ([@haydenbleasel](https://github.com/haydenbleasel))
 - Update screenshot, fix release script ([@haydenbleasel](https://github.com/haydenbleasel))
 
