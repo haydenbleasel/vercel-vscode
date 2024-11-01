@@ -52,7 +52,7 @@
     "@biomejs/biome": "1.9.4",
     "@types/node": "22.x",
     "@types/vscode": "1.72.0",
-    "auto": "^11.2.1",
+    "auto": "^11.3.0",
     "tsup": "^8.3.5",
     "typescript": "^5.6.3",
     "ultracite": "4.1.4"
