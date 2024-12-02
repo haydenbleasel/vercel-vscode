@@ -20,25 +20,25 @@ importers:
     devDependencies:
       '@auto-it/all-contributors':
         specifier: ^11.3.0
-        version: 11.3.0(@types/node@22.8.6)(typescript@5.7.2)
+        version: 11.3.0(@types/node@22.10.1)(typescript@5.7.2)
       '@auto-it/first-time-contributor':
         specifier: ^11.3.0
-        version: 11.3.0(@types/node@22.8.6)(typescript@5.7.2)
+        version: 11.3.0(@types/node@22.10.1)(typescript@5.7.2)
       '@auto-it/npm':
         specifier: ^11.3.0
-        version: 11.3.0(@types/node@22.8.6)(typescript@5.7.2)
+        version: 11.3.0(@types/node@22.10.1)(typescript@5.7.2)
       '@biomejs/biome':
         specifier: 1.9.4
         version: 1.9.4
       '@types/node':
         specifier: 22.x
-        version: 22.8.6
+        version: 22.10.1
       '@types/vscode':
         specifier: 1.72.0
         version: 1.72.0
       auto:
         specifier: ^11.3.0
-        version: 11.3.0(@types/node@22.8.6)(typescript@5.7.2)
+        version: 11.3.0(@types/node@22.10.1)(typescript@5.7.2)
       tsup:
         specifier: ^8.3.5
         version: 8.3.5(jiti@1.21.0)(postcss@8.4.47)(typescript@5.7.2)(yaml@2.4.2)
@@ -54,22 +54,9 @@ packages:
   '@auto-it/all-contributors@11.3.0':
     resolution: {integrity: sha512-2d9y9P5mZoqrqkvIHfQmZ57sLS6vNhLW3bilqPbWW+hzzeJeGIx5cKLIHG+RfuDCeP9d3A3Ahnj7ilIMMUVENA==}
 
-  '@auto-it/bot-list@11.2.1':
-    resolution: {integrity: sha512-hZpdV0Bzd6mxSVlYZtw0k/Qog3tT4NOQSYViQ/wsabZXNa2GoRr0t6aid7TuJItpMvLG9+g2TMZwjF+Q4JdGPA==}
-    engines: {node: '>=10.x'}
-
   '@auto-it/bot-list@11.3.0':
     resolution: {integrity: sha512-+izoqAyOSiDVt3WcjVkSvLBV9c82VXLSf3oSWWcCeoxW/YDQ2AoInQ3M3EEyuBP+Yw9KQwGTTYHqpR7ZFkZpDQ==}
     engines: {node: '>=10.x'}
-
-  '@auto-it/core@11.2.1':
-    resolution: {integrity: sha512-lF8rHKNiFI9XTYxh1S+kw3xZfN239y54/GBzJ3tqdkNSMsE+SbpFYctG/HTTx8NLYXYTBpiQCftBL+WcXYS9UA==}
-    peerDependencies:
-      '@types/node': '*'
-      typescript: '>=2.7'
-    peerDependenciesMeta:
-      '@types/node':
-        optional: true
 
   '@auto-it/core@11.3.0':
     resolution: {integrity: sha512-3i7ooAhQJulVDG3gmdOioTXLhpFoS75Z/OsLV8ZkrEaEH/sfxlslqFx20VjWva7gMLl2iO8IjbRnlLhkXy5geg==}
@@ -514,8 +501,8 @@ packages:
   '@types/estree@1.0.6':
     resolution: {integrity: sha512-AYnb1nQyY49te+VRAVgmzfcgjYS91mY5P0TKUDCLEM+gNnA+3T6rWITXRLYCpahpqSQbN5cE+gHpnPyXjHWxcw==}
 
-  '@types/node@22.8.6':
-    resolution: {integrity: sha512-tosuJYKrIqjQIlVCM4PEGxOmyg3FCPa/fViuJChnGeEIhjA46oy8FMVoF9su1/v8PNs2a8Q0iFNyOx0uOF91nw==}
+  '@types/node@22.10.1':
+    resolution: {integrity: sha512-qKgsUwfHZV2WCWLAnVP1JqnpE6Im6h3Y0+fYgMTasNQ7V++CBX5OT1as0g0f+OyubbFqhf6XVNIsmN4IIhEgGQ==}
 
   '@types/parse-json@4.0.2':
     resolution: {integrity: sha512-dISoDXWWQwUquiKsyZ4Ng+HX2KsPL7LyHKHQwgGFEA3IaKac4Obd+h2a/a6waisAoepJlBcx9paWqjA8/HVjCw==}
@@ -1852,8 +1839,8 @@ packages:
   unbox-primitive@1.0.2:
     resolution: {integrity: sha512-61pPlCD9h51VoreyJ0BReideM3MDKMKnh6+V9L08331ipq6Q8OFXZYiqP6n/tbHx4s5I9uRhcye6BrbkizkBDw==}
 
-  undici-types@6.19.8:
-    resolution: {integrity: sha512-ve2KP6f/JnbPBFyobGHuerC9g1FYGn/F8n1LWTwNxCEzd6IfqTwUQcNXgEtmmQ6DlRrC1hrSrBnCZPokRrDHjw==}
+  undici-types@6.20.0:
+    resolution: {integrity: sha512-Ny6QZ2Nju20vw1SRHe3d9jVu6gJ+4e3+MMpqu7pqE5HT6WsTSlce++GQmK5UXS8mzV8DSYHrQH+Xrf2jVcuKNg==}
 
   universal-user-agent@6.0.1:
     resolution: {integrity: sha512-yCzhz6FN2wU1NiiQRogkTQszlQSlpWaw8SvVegAc+bDxbzHgh1vX8uIe8OYyMH6DwH+sdTJsgMl36+mSMdRJIQ==}
@@ -1943,10 +1930,10 @@ packages:
 
 snapshots:
 
-  '@auto-it/all-contributors@11.3.0(@types/node@22.8.6)(typescript@5.7.2)':
+  '@auto-it/all-contributors@11.3.0(@types/node@22.10.1)(typescript@5.7.2)':
     dependencies:
       '@auto-it/bot-list': 11.3.0
-      '@auto-it/core': 11.3.0(@types/node@22.8.6)(typescript@5.7.2)
+      '@auto-it/core': 11.3.0(@types/node@22.10.1)(typescript@5.7.2)
       '@octokit/rest': 18.12.0
       all-contributors-cli: 6.19.0
       anymatch: 3.1.3
@@ -1965,62 +1952,9 @@ snapshots:
       - supports-color
       - typescript
 
-  '@auto-it/bot-list@11.2.1': {}
-
   '@auto-it/bot-list@11.3.0': {}
 
-  '@auto-it/core@11.2.1(@types/node@22.8.6)(typescript@5.7.2)':
-    dependencies:
-      '@auto-it/bot-list': 11.2.1
-      '@endemolshinegroup/cosmiconfig-typescript-loader': 3.0.2(cosmiconfig@7.0.0)(typescript@5.7.2)
-      '@octokit/core': 3.6.0
-      '@octokit/plugin-enterprise-compatibility': 1.3.0
-      '@octokit/plugin-retry': 3.0.9
-      '@octokit/plugin-throttling': 3.7.0(@octokit/core@3.6.0)
-      '@octokit/rest': 18.12.0
-      await-to-js: 3.0.0
-      chalk: 4.1.2
-      cosmiconfig: 7.0.0
-      deepmerge: 4.3.1
-      dotenv: 8.6.0
-      endent: 2.1.0
-      enquirer: 2.4.1
-      env-ci: 5.5.0
-      fast-glob: 3.3.2
-      fp-ts: 2.16.6
-      fromentries: 1.3.2
-      gitlog: 4.0.8
-      https-proxy-agent: 5.0.1
-      import-cwd: 3.0.0
-      import-from: 3.0.0
-      io-ts: 2.2.21(fp-ts@2.16.6)
-      lodash.chunk: 4.2.0
-      log-symbols: 4.1.0
-      node-fetch: 2.6.7
-      parse-author: 2.0.0
-      parse-github-url: 1.0.2
-      pretty-ms: 7.0.1
-      requireg: 0.2.2
-      semver: 7.6.2
-      signale: 1.4.0
-      tapable: 2.2.1
-      terminal-link: 2.1.1
-      tinycolor2: 1.6.0
-      ts-node: 10.9.2(@types/node@22.8.6)(typescript@5.7.2)
-      tslib: 2.1.0
-      type-fest: 0.21.3
-      typescript: 5.7.2
-      typescript-memoize: 1.1.1
-      url-join: 4.0.1
-    optionalDependencies:
-      '@types/node': 22.8.6
-    transitivePeerDependencies:
-      - '@swc/core'
-      - '@swc/wasm'
-      - encoding
-      - supports-color
-
-  '@auto-it/core@11.3.0(@types/node@22.8.6)(typescript@5.7.2)':
+  '@auto-it/core@11.3.0(@types/node@22.10.1)(typescript@5.7.2)':
     dependencies:
       '@auto-it/bot-list': 11.3.0
       '@endemolshinegroup/cosmiconfig-typescript-loader': 3.0.2(cosmiconfig@7.0.0)(typescript@5.7.2)
@@ -2057,24 +1991,24 @@ snapshots:
       tapable: 2.2.1
       terminal-link: 2.1.1
       tinycolor2: 1.6.0
-      ts-node: 10.9.2(@types/node@22.8.6)(typescript@5.7.2)
+      ts-node: 10.9.2(@types/node@22.10.1)(typescript@5.7.2)
       tslib: 2.1.0
       type-fest: 0.21.3
       typescript: 5.7.2
       typescript-memoize: 1.1.1
       url-join: 4.0.1
     optionalDependencies:
-      '@types/node': 22.8.6
+      '@types/node': 22.10.1
     transitivePeerDependencies:
       - '@swc/core'
       - '@swc/wasm'
       - encoding
       - supports-color
 
-  '@auto-it/first-time-contributor@11.3.0(@types/node@22.8.6)(typescript@5.7.2)':
+  '@auto-it/first-time-contributor@11.3.0(@types/node@22.10.1)(typescript@5.7.2)':
     dependencies:
       '@auto-it/bot-list': 11.3.0
-      '@auto-it/core': 11.3.0(@types/node@22.8.6)(typescript@5.7.2)
+      '@auto-it/core': 11.3.0(@types/node@22.10.1)(typescript@5.7.2)
       array.prototype.flatmap: 1.3.2
       endent: 2.1.0
       tslib: 2.1.0
@@ -2087,9 +2021,9 @@ snapshots:
       - supports-color
       - typescript
 
-  '@auto-it/npm@11.3.0(@types/node@22.8.6)(typescript@5.7.2)':
+  '@auto-it/npm@11.3.0(@types/node@22.10.1)(typescript@5.7.2)':
     dependencies:
-      '@auto-it/core': 11.3.0(@types/node@22.8.6)(typescript@5.7.2)
+      '@auto-it/core': 11.3.0(@types/node@22.10.1)(typescript@5.7.2)
       '@auto-it/package-json-utils': 11.3.0
       await-to-js: 3.0.0
       endent: 2.1.0
@@ -2116,10 +2050,10 @@ snapshots:
       parse-author: 2.0.0
       parse-github-url: 1.0.2
 
-  '@auto-it/released@11.3.0(@types/node@22.8.6)(typescript@5.7.2)':
+  '@auto-it/released@11.3.0(@types/node@22.10.1)(typescript@5.7.2)':
     dependencies:
       '@auto-it/bot-list': 11.3.0
-      '@auto-it/core': 11.3.0(@types/node@22.8.6)(typescript@5.7.2)
+      '@auto-it/core': 11.3.0(@types/node@22.10.1)(typescript@5.7.2)
       deepmerge: 4.3.1
       fp-ts: 2.16.6
       io-ts: 2.2.21(fp-ts@2.16.6)
@@ -2132,9 +2066,9 @@ snapshots:
       - supports-color
       - typescript
 
-  '@auto-it/version-file@11.3.0(@types/node@22.8.6)(typescript@5.7.2)':
+  '@auto-it/version-file@11.3.0(@types/node@22.10.1)(typescript@5.7.2)':
     dependencies:
-      '@auto-it/core': 11.3.0(@types/node@22.8.6)(typescript@5.7.2)
+      '@auto-it/core': 11.3.0(@types/node@22.10.1)(typescript@5.7.2)
       fp-ts: 2.16.6
       io-ts: 2.2.21(fp-ts@2.16.6)
       semver: 7.6.2
@@ -2487,9 +2421,9 @@ snapshots:
 
   '@types/estree@1.0.6': {}
 
-  '@types/node@22.8.6':
+  '@types/node@22.10.1':
     dependencies:
-      undici-types: 6.19.8
+      undici-types: 6.20.0
 
   '@types/parse-json@4.0.2': {}
 
@@ -2586,12 +2520,12 @@ snapshots:
 
   author-regex@1.0.0: {}
 
-  auto@11.3.0(@types/node@22.8.6)(typescript@5.7.2):
+  auto@11.3.0(@types/node@22.10.1)(typescript@5.7.2):
     dependencies:
-      '@auto-it/core': 11.3.0(@types/node@22.8.6)(typescript@5.7.2)
-      '@auto-it/npm': 11.3.0(@types/node@22.8.6)(typescript@5.7.2)
-      '@auto-it/released': 11.3.0(@types/node@22.8.6)(typescript@5.7.2)
-      '@auto-it/version-file': 11.3.0(@types/node@22.8.6)(typescript@5.7.2)
+      '@auto-it/core': 11.3.0(@types/node@22.10.1)(typescript@5.7.2)
+      '@auto-it/npm': 11.3.0(@types/node@22.10.1)(typescript@5.7.2)
+      '@auto-it/released': 11.3.0(@types/node@22.10.1)(typescript@5.7.2)
+      '@auto-it/version-file': 11.3.0(@types/node@22.10.1)(typescript@5.7.2)
       await-to-js: 3.0.0
       chalk: 4.1.2
       command-line-application: 0.10.1
@@ -3792,14 +3726,14 @@ snapshots:
 
   ts-interface-checker@0.1.13: {}
 
-  ts-node@10.9.2(@types/node@22.8.6)(typescript@5.7.2):
+  ts-node@10.9.2(@types/node@22.10.1)(typescript@5.7.2):
     dependencies:
       '@cspotcode/source-map-support': 0.8.1
       '@tsconfig/node10': 1.0.11
       '@tsconfig/node12': 1.0.11
       '@tsconfig/node14': 1.0.3
       '@tsconfig/node16': 1.0.4
-      '@types/node': 22.8.6
+      '@types/node': 22.10.1
       acorn: 8.11.3
       acorn-walk: 8.3.2
       arg: 4.1.3
@@ -3904,7 +3838,7 @@ snapshots:
       has-symbols: 1.0.3
       which-boxed-primitive: 1.0.2
 
-  undici-types@6.19.8: {}
+  undici-types@6.20.0: {}
 
   universal-user-agent@6.0.1: {}
 
