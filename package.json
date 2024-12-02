@@ -55,7 +55,7 @@
     "auto": "^11.3.0",
     "tsup": "^8.3.5",
     "typescript": "^5.7.2",
-    "ultracite": "4.1.4"
+    "ultracite": "4.1.8"
   },
   "author": "Hayden Bleasel <hello@haydenbleasel.com>",
   "contributors": [
