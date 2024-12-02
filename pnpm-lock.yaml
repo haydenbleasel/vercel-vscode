@@ -19,8 +19,8 @@ importers:
         version: 3.23.8
     devDependencies:
       '@auto-it/all-contributors':
-        specifier: ^11.2.1
-        version: 11.2.1(@types/node@22.8.6)(typescript@5.7.2)
+        specifier: ^11.3.0
+        version: 11.3.0(@types/node@22.8.6)(typescript@5.7.2)
       '@auto-it/first-time-contributor':
         specifier: ^11.3.0
         version: 11.3.0(@types/node@22.8.6)(typescript@5.7.2)
@@ -51,8 +51,8 @@ importers:
 
 packages:
 
-  '@auto-it/all-contributors@11.2.1':
-    resolution: {integrity: sha512-9mRN3q6GssrvkTsXTfEWQ2RRcZTJqkynANZMV0GU6XP5OIV97rkxPFHcmAE8CwasEOEgO5Gnv1OdOkmOrqUVOQ==}
+  '@auto-it/all-contributors@11.3.0':
+    resolution: {integrity: sha512-2d9y9P5mZoqrqkvIHfQmZ57sLS6vNhLW3bilqPbWW+hzzeJeGIx5cKLIHG+RfuDCeP9d3A3Ahnj7ilIMMUVENA==}
 
   '@auto-it/bot-list@11.2.1':
     resolution: {integrity: sha512-hZpdV0Bzd6mxSVlYZtw0k/Qog3tT4NOQSYViQ/wsabZXNa2GoRr0t6aid7TuJItpMvLG9+g2TMZwjF+Q4JdGPA==}
@@ -1949,10 +1949,10 @@ packages:
 
 snapshots:
 
-  '@auto-it/all-contributors@11.2.1(@types/node@22.8.6)(typescript@5.7.2)':
+  '@auto-it/all-contributors@11.3.0(@types/node@22.8.6)(typescript@5.7.2)':
     dependencies:
-      '@auto-it/bot-list': 11.2.1
-      '@auto-it/core': 11.2.1(@types/node@22.8.6)(typescript@5.7.2)
+      '@auto-it/bot-list': 11.3.0
+      '@auto-it/core': 11.3.0(@types/node@22.8.6)(typescript@5.7.2)
       '@octokit/rest': 18.12.0
       all-contributors-cli: 6.19.0
       anymatch: 3.1.3
