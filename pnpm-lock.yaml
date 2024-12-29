@@ -46,8 +46,8 @@ importers:
         specifier: ^5.7.2
         version: 5.7.2
       ultracite:
-        specifier: 4.1.8
-        version: 4.1.8
+        specifier: 4.1.14
+        version: 4.1.14
 
 packages:
 
@@ -707,6 +707,10 @@ packages:
   command-line-usage@6.1.3:
     resolution: {integrity: sha512-sH5ZSPr+7UStsloltmDh7Ce5fb8XPlHyoPzTpyyMuYCtervL65+ubVZ6Q61cFtFl62UyJlc8/JwERRbAFPUqgw==}
     engines: {node: '>=8.0.0'}
+
+  commander@12.1.0:
+    resolution: {integrity: sha512-Vw8qHK3bZM9y/P10u3Vib8o/DdkvA2OtPtZvD871QKjy74Wj1WSKFILMPRPSdUSx5RFK1arlJzEtA4PkFgnbuA==}
+    engines: {node: '>=18'}
 
   commander@4.1.1:
     resolution: {integrity: sha512-NOKm8xhkzAjzFx8B2v5OAHT+u5pRQc2UCa2Vq9jYL/31o2wi9mxBA7LIFs3sV5VSC49z6pEhfbMULvShKj26WA==}
@@ -1832,8 +1836,8 @@ packages:
     resolution: {integrity: sha512-dvdQgNDNJo+8B2uBQoqdb11eUCE1JQXhvjC/CZtgvZseVd5TYMXnq0+vuUemXbd/Se29cTaUuPX3YIc2xgbvIg==}
     engines: {node: '>=8'}
 
-  ultracite@4.1.8:
-    resolution: {integrity: sha512-oDB80YZ6aXGEuHtEHuOjOMhbyU/hxGvfWdO+rs5Tlq2C2sB1WGVtHXsX7t934ukcH3v7aCBOo4HVHx27JaBsKw==}
+  ultracite@4.1.14:
+    resolution: {integrity: sha512-x/wsSJqRcWV1/q++pPE9b9nynH6F6T1LUUxvxNkUyyOZrFr3N7VuPUuujamkF7yvcc6YPl8fq5nfz7ehFCC16Q==}
     hasBin: true
 
   unbox-primitive@1.0.2:
@@ -2653,6 +2657,8 @@ snapshots:
       chalk: 2.4.2
       table-layout: 1.0.2
       typical: 5.2.0
+
+  commander@12.1.0: {}
 
   commander@4.1.1: {}
 
@@ -3829,7 +3835,9 @@ snapshots:
 
   typical@5.2.0: {}
 
-  ultracite@4.1.8: {}
+  ultracite@4.1.14:
+    dependencies:
+      commander: 12.1.0
 
   unbox-primitive@1.0.2:
     dependencies:
