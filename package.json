@@ -41,7 +41,7 @@
     "bump-deps": "npx npm-check-updates -u -x @types/vscode,eslint && pnpm install"
   },
   "dependencies": {
-    "cross-fetch": "^4.0.0",
+    "cross-fetch": "^4.1.0",
     "date-fns": "^4.1.0",
     "zod": "^3.23.8"
   },
