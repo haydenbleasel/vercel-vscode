@@ -2,6 +2,9 @@
 
 A VS Code extension for Vercel deployment status.
 
+> [!NOTE]
+> Archiving this project. You should check out [vscode-extension.vercel.app](https://vscode-extension.vercel.app/)
+
 ![Screenshot](./screenshot.png)
 
 ## Prerequisites
